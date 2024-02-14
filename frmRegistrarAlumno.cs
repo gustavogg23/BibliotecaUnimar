@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace BibliotecaUnimar
 {
-    public partial class MenuPrincipal : Form
+    public partial class frmRegistrarAlumno : Form
     {
-        public MenuPrincipal()
+        public frmRegistrarAlumno()
         {
             InitializeComponent();
-        }
-
-        private void btnRegistroAlum_Click(object sender, EventArgs e)
-        {
-            frmRegistrarAlumno frm = new frmRegistrarAlumno();
-            frm.ShowDialog();
         }
     }
 }

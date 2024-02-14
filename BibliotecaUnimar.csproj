@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frmRegistrarAlumno.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarAlumno.Designer.cs">
+      <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
+    </Compile>
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -54,6 +60,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmRegistrarAlumno.resx">
+      <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
