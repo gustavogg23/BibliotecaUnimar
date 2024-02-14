@@ -53,6 +53,7 @@
     <Compile Include="frmRegistrarAlumno.Designer.cs">
       <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
     </Compile>
+    <Compile Include="Libro.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
