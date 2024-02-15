@@ -16,6 +16,7 @@ namespace BibliotecaUnimar
         {
             InitializeComponent();
         }
+        ListaEstudiantes lista = new ListaEstudiantes();
         string nombre, apellido, cedula;
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -25,8 +26,6 @@ namespace BibliotecaUnimar
 
         private void AgregarDatos()
         {
-            ListaEstudiantes lista = new ListaEstudiantes();
-
             nombre = txtNombre.Text;
             apellido = txtApellido.Text;
             cedula = txtCedula.Text;
