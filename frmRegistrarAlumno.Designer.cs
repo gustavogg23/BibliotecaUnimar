@@ -32,8 +32,8 @@
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblCedula = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -79,25 +79,25 @@
             this.txtNombre.Size = new System.Drawing.Size(139, 20);
             this.txtNombre.TabIndex = 3;
             // 
-            // textBox1
+            // txtApellido
             // 
-            this.textBox1.Location = new System.Drawing.Point(131, 85);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 20);
-            this.textBox1.TabIndex = 4;
+            this.txtApellido.Location = new System.Drawing.Point(131, 85);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(139, 20);
+            this.txtApellido.TabIndex = 4;
             // 
-            // textBox2
+            // txtCedula
             // 
-            this.textBox2.Location = new System.Drawing.Point(131, 147);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(139, 20);
-            this.textBox2.TabIndex = 5;
+            this.txtCedula.Location = new System.Drawing.Point(131, 147);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(139, 20);
+            this.txtCedula.TabIndex = 5;
             // 
             // panel1
             // 
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.txtCedula);
+            this.panel1.Controls.Add(this.txtApellido);
             this.panel1.Controls.Add(this.txtNombre);
             this.panel1.Controls.Add(this.lblCedula);
             this.panel1.Controls.Add(this.lblApellido);
@@ -121,6 +121,7 @@
             this.btnRegistrar.TabIndex = 6;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // frmRegistrarAlumno
             // 
@@ -148,8 +149,8 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.TextBox txtNombre;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtApellido;
+        private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnRegistrar;
     }
