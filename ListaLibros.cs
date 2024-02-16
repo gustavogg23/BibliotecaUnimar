@@ -6,30 +6,34 @@ using System.Threading.Tasks;
 
 namespace BibliotecaUnimar
 {
-    public class ListaEstudiantes
+    public class ListaLibros
     {
         // Atributos
         private Nodo cabeza;
-        private int tamano;
+        private int tamaño;
 
         // Método Constructor
-        public ListaEstudiantes()
+        public ListaLibros()
         {
             cabeza = null;
-            tamano = 0;
+            tamaño = 0;
         }
 
-        // Método para saber si la lista está vacía
-        public bool estaVacia()
+        // Métodos Getters
+        public Nodo getCabeza()
         {
-            return cabeza == null;
+            return cabeza;
         }
 
-        // Método para agregar un estudiante a la lista
-        public void agregarEstudiante(Estudiante valor)
+        public int getTamaño()
         {
-            // Se define un nuevo nodo
-            Nodo nuevo = new Nodo(valor);
+            return tamaño;
+        }
+
+        // Método para agregar un libro a la lista
+        public void agregarLibro(Libro libro)
+        {
+            Nodo nuevo = new Nodo(libro);
             if (cabeza == null)
             {
                 cabeza = nuevo;
@@ -43,64 +47,49 @@ namespace BibliotecaUnimar
                 }
                 aux.setSiguiente(nuevo);
             }
-            tamano++;
+            tamaño++;
         }
 
-        // Método para buscar un estudiante en la lista
-        public Estudiante buscarEstudiante(string cedula)
+        // Método para buscar un libro en la lista
+        public Libro buscarLibro(string titulo)
         {
             Nodo aux = cabeza;
             while (aux != null)
             {
-                if (aux.getValor().getCedula() == cedula)
+                if (aux.getValorLib().getTitulo() == titulo)
                 {
-                    return aux.getValor();
+                    return aux.getValorLib();
                 }
                 aux = aux.getSiguiente();
             }
             return null;
         }
 
-        // Método para eliminar un estudiante de la lista
-        public void eliminarEstudiante(string cedula)
+        // Método para eliminar un libro de la lista
+        public void eliminarLibro(string titulo)
         {
             if (cabeza != null)
             {
-                if (cabeza.getValor().getCedula() == cedula)
+                if (cabeza.getValorLib().getTitulo() == titulo)
                 {
                     cabeza = cabeza.getSiguiente();
+                    tamaño--;
                 }
                 else
                 {
                     Nodo aux = cabeza;
                     while (aux.getSiguiente() != null)
                     {
-                        if (aux.getSiguiente().getValor().getCedula() == cedula)
+                        if (aux.getSiguiente().getValorLib().getTitulo() == titulo)
                         {
                             aux.setSiguiente(aux.getSiguiente().getSiguiente());
+                            tamaño--;
                             break;
                         }
                         aux = aux.getSiguiente();
                     }
                 }
-                tamano--;
             }
-        }
-
-        public void getLista()
-        {
-            Nodo actual = cabeza;
-            while (actual != null)
-            {
-                Console.WriteLine(actual.getValor());
-                actual = actual.getSiguiente();
-            }
-        }
-
-        // Método para obtener el tamaño de la lista
-        public int getTamano()
-        {
-            return tamano;
         }
     }
 }
