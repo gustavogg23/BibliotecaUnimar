@@ -17,7 +17,15 @@ namespace BibliotecaUnimar
             InitializeComponent();
         }
         ListaEstudiantes lista = new ListaEstudiantes();
-        string nombre, apellido, cedula;
+        string nombre, apellido, cedula, carrera;
+
+
+        private void btnVolverMenu_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal menu = new MenuPrincipal();
+            menu.Show();
+            this.Close();
+        }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
@@ -29,8 +37,9 @@ namespace BibliotecaUnimar
             nombre = txtNombre.Text;
             apellido = txtApellido.Text;
             cedula = txtCedula.Text;
+            carrera = cboCarrera.Text;
 
-            Estudiante estudiante = new Estudiante(nombre, apellido, cedula);
+            Estudiante estudiante = new Estudiante(nombre, apellido, cedula, carrera);
             lista.agregarEstudiante(estudiante);
         }
     }

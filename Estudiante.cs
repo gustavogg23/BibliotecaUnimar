@@ -12,13 +12,15 @@ namespace BibliotecaUnimar
         private string nombre;
         private string apellido;
         private string cedula;
+        private string carrera;
 
         // Método Constructor
-        public Estudiante(string nombre, string apellido, string cedula)
+        public Estudiante(string nombre, string apellido, string cedula, string carrera)
         {
             this.nombre = nombre;
             this.apellido = apellido;
             this.cedula = cedula;
+            this.carrera = carrera;
         }
 
         // Métodos Getters
@@ -35,6 +37,11 @@ namespace BibliotecaUnimar
         public string getCedula()
         {
             return cedula;
+        }
+
+        public string getCarrera()
+        {
+            return carrera;
         }
     }
 }
