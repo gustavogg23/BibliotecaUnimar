@@ -17,6 +17,7 @@ namespace BibliotecaUnimar
         {
             InitializeComponent();
         }
+
         public ListaEstudiantes lista = new ListaEstudiantes();
         string nombre, apellido, cedula, carrera;
 
@@ -30,7 +31,7 @@ namespace BibliotecaUnimar
 
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8))
+            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8 || e.KeyChar == 130 || e.KeyChar >= 160 && e.KeyChar <= 165))
             {
                 e.Handled = true;
                 MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
@@ -40,10 +41,20 @@ namespace BibliotecaUnimar
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8))
+            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8 || e.KeyChar == 130 || e.KeyChar >= 160 && e.KeyChar <= 165))
             {
                 e.Handled = true;
                 MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+        }
+
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= 48 && e.KeyChar <= 57 || e.KeyChar == 8))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten números", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
         }
