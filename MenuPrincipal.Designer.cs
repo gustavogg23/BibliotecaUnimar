@@ -90,6 +90,7 @@
             this.btnRegistroPrest.TabIndex = 1;
             this.btnRegistroPrest.Text = "Registro de Préstamos";
             this.btnRegistroPrest.UseVisualStyleBackColor = false;
+            this.btnRegistroPrest.Click += new System.EventHandler(this.btnRegistroPrest_Click);
             // 
             // btnPrestamosAct
             // 

@@ -46,12 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CtrlUserRegistroPrestamo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CtrlUserRegistroPrestamo.Designer.cs">
+      <DependentUpon>CtrlUserRegistroPrestamo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Estudiante.cs" />
     <Compile Include="frmRegistrarAlumno.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmRegistrarAlumno.Designer.cs">
       <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRegistrarPrestamo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistrarPrestamo.Designer.cs">
+      <DependentUpon>frmRegistrarPrestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Libro.cs" />
     <Compile Include="ListaEstudiantes.cs" />
@@ -64,8 +76,14 @@
     <Compile Include="NodoEs.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CtrlUserRegistroPrestamo.resx">
+      <DependentUpon>CtrlUserRegistroPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarAlumno.resx">
       <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistrarPrestamo.resx">
+      <DependentUpon>frmRegistrarPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

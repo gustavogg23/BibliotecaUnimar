@@ -23,5 +23,11 @@ namespace BibliotecaUnimar
             frmRegistrarAlumno frm = new frmRegistrarAlumno();
             frm.ShowDialog(); // Mostrar el formulario
         }
+
+        private void btnRegistroPrest_Click(object sender, EventArgs e)
+        {
+            frmRegistrarPrestamo frm = new frmRegistrarPrestamo(); 
+            frm.ShowDialog();
+        }
     }
 }
