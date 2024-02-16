@@ -87,6 +87,16 @@ namespace BibliotecaUnimar
             }
         }
 
+        public void getLista()
+        {
+            Nodo actual = cabeza;
+            while (actual != null)
+            {
+                Console.WriteLine(actual.getValor());
+                actual = actual.getSiguiente();
+            }
+        }
+
         // Método para obtener el tamaño de la lista
         public int getTamano()
         {

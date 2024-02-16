@@ -35,6 +35,7 @@
             this.txtApellido = new System.Windows.Forms.TextBox();
             this.txtCedula = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtListEstudiantes = new System.Windows.Forms.TextBox();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.btnVolverMenu = new System.Windows.Forms.Button();
             this.cboCarrera = new System.Windows.Forms.ComboBox();
@@ -58,7 +59,7 @@
             // 
             this.lblApellido.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(4, 76);
+            this.lblApellido.Location = new System.Drawing.Point(4, 74);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(133, 38);
             this.lblApellido.TabIndex = 1;
@@ -69,7 +70,7 @@
             // 
             this.lblCedula.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.White;
-            this.lblCedula.Location = new System.Drawing.Point(16, 133);
+            this.lblCedula.Location = new System.Drawing.Point(16, 127);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(133, 38);
             this.lblCedula.TabIndex = 2;
@@ -78,27 +79,30 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(131, 31);
+            this.txtNombre.Location = new System.Drawing.Point(141, 34);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(139, 20);
+            this.txtNombre.Size = new System.Drawing.Size(169, 20);
             this.txtNombre.TabIndex = 3;
+            this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(131, 85);
+            this.txtApellido.Location = new System.Drawing.Point(141, 87);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(139, 20);
+            this.txtApellido.Size = new System.Drawing.Size(169, 20);
             this.txtApellido.TabIndex = 4;
+            this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(131, 142);
+            this.txtCedula.Location = new System.Drawing.Point(141, 138);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(139, 20);
+            this.txtCedula.Size = new System.Drawing.Size(169, 20);
             this.txtCedula.TabIndex = 5;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtListEstudiantes);
             this.panel1.Controls.Add(this.lblCarrera);
             this.panel1.Controls.Add(this.btnVolverMenu);
             this.panel1.Controls.Add(this.cboCarrera);
@@ -114,13 +118,23 @@
             this.panel1.Size = new System.Drawing.Size(615, 455);
             this.panel1.TabIndex = 6;
             // 
+            // txtListEstudiantes
+            // 
+            this.txtListEstudiantes.Location = new System.Drawing.Point(355, 34);
+            this.txtListEstudiantes.Multiline = true;
+            this.txtListEstudiantes.Name = "txtListEstudiantes";
+            this.txtListEstudiantes.ReadOnly = true;
+            this.txtListEstudiantes.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtListEstudiantes.Size = new System.Drawing.Size(247, 231);
+            this.txtListEstudiantes.TabIndex = 10;
+            // 
             // lblCarrera
             // 
             this.lblCarrera.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarrera.ForeColor = System.Drawing.Color.White;
-            this.lblCarrera.Location = new System.Drawing.Point(10, 177);
+            this.lblCarrera.Location = new System.Drawing.Point(12, 177);
             this.lblCarrera.Name = "lblCarrera";
-            this.lblCarrera.Size = new System.Drawing.Size(133, 38);
+            this.lblCarrera.Size = new System.Drawing.Size(127, 38);
             this.lblCarrera.TabIndex = 9;
             this.lblCarrera.Text = "Carrera:";
             this.lblCarrera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -150,11 +164,12 @@
             "Diseño Gráfico",
             "Derecho",
             "Idiomas Modernos",
+            "Psicología",
             "Adiministración",
             "Contaduría Pública"});
-            this.cboCarrera.Location = new System.Drawing.Point(152, 190);
+            this.cboCarrera.Location = new System.Drawing.Point(141, 186);
             this.cboCarrera.Name = "cboCarrera";
-            this.cboCarrera.Size = new System.Drawing.Size(158, 21);
+            this.cboCarrera.Size = new System.Drawing.Size(169, 21);
             this.cboCarrera.TabIndex = 7;
             // 
             // btnRegistrar
@@ -220,5 +235,6 @@
         private System.Windows.Forms.ComboBox cboCarrera;
         private System.Windows.Forms.Button btnVolverMenu;
         private System.Windows.Forms.Label lblCarrera;
+        private System.Windows.Forms.TextBox txtListEstudiantes;
     }
 }
