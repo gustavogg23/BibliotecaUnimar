@@ -86,9 +86,10 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(14, 320);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(614, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(465, 150);
+            this.panel1.Size = new System.Drawing.Size(480, 551);
             this.panel1.TabIndex = 9;
             // 
             // frmRegistrarPrestamo

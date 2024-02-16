@@ -148,8 +148,7 @@
             this.btnVolverMenu.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverMenu.FlatAppearance.BorderSize = 3;
-            this.btnVolverMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
             this.btnVolverMenu.Location = new System.Drawing.Point(254, 349);
             this.btnVolverMenu.Name = "btnVolverMenu";
@@ -182,8 +181,7 @@
             this.btnRegistrar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.FlatAppearance.BorderSize = 3;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(35, 349);
             this.btnRegistrar.Name = "btnRegistrar";

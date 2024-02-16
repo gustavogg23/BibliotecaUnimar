@@ -24,7 +24,7 @@ namespace BibliotecaUnimar
         private void ValidacionUserPrestamo()
         {
             CtrlUserRegistroPrestamo ctl = new CtrlUserRegistroPrestamo();
-            ctl.Dock = DockStyle.Fill;
+            ctl.Dock = DockStyle.Fill;               
             panel1.Controls.Add(ctl);
             ctl.Show();
         }

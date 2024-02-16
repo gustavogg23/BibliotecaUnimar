@@ -29,5 +29,10 @@ namespace BibliotecaUnimar
             frmRegistrarPrestamo frm = new frmRegistrarPrestamo(); 
             frm.ShowDialog();
         }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
