@@ -61,6 +61,22 @@ namespace BibliotecaUnimar
             return null;
         }
 
+        // Método para verificar si un estudiante está registrado
+        public Boolean existeEstudiante(string cedula)
+        {
+            Nodo actual = cabeza;
+
+            while (actual != null)
+            {
+                if (actual.getValor().getCedula() == cedula)
+                {
+                    return true;
+                }
+                actual = actual.getSiguiente();
+            }
+            return false;
+        }
+
         // Método para eliminar un estudiante de la lista
         public void eliminarEstudiante(string cedula)
         {
@@ -87,17 +103,7 @@ namespace BibliotecaUnimar
             }
         }
 
-        public void getLista()
-        {
-            Nodo actual = cabeza;
-            while (actual != null)
-            {
-                Console.WriteLine(actual.getValor());
-                actual = actual.getSiguiente();
-            }
-        }
-
-        // Método para obtener el tamaño de la lista
+       // Método para obtener el tamaño de la lista
         public int getTamano()
         {
             return tamano;

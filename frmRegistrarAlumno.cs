@@ -63,6 +63,7 @@ namespace BibliotecaUnimar
         {
             AgregarDatos();
             LimpiarDatos();
+            MessageBox.Show("Se ha registrado el estudiante");
         }
 
         private void AgregarDatos()
