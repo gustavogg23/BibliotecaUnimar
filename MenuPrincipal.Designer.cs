@@ -65,7 +65,7 @@
             this.flowLayoutPanel1.Controls.Add(this.button4);
             this.flowLayoutPanel1.Location = new System.Drawing.Point(237, 117);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(354, 269);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(372, 269);
             this.flowLayoutPanel1.TabIndex = 1;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
@@ -78,7 +78,7 @@
             this.btnRegistroAlum.ForeColor = System.Drawing.Color.White;
             this.btnRegistroAlum.Location = new System.Drawing.Point(3, 3);
             this.btnRegistroAlum.Name = "btnRegistroAlum";
-            this.btnRegistroAlum.Size = new System.Drawing.Size(170, 61);
+            this.btnRegistroAlum.Size = new System.Drawing.Size(185, 61);
             this.btnRegistroAlum.TabIndex = 0;
             this.btnRegistroAlum.Text = "Registrar Alumno";
             this.btnRegistroAlum.UseVisualStyleBackColor = false;
@@ -91,9 +91,9 @@
             this.btnRegistroPrest.FlatAppearance.BorderSize = 3;
             this.btnRegistroPrest.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.btnRegistroPrest.ForeColor = System.Drawing.Color.White;
-            this.btnRegistroPrest.Location = new System.Drawing.Point(179, 3);
+            this.btnRegistroPrest.Location = new System.Drawing.Point(194, 3);
             this.btnRegistroPrest.Name = "btnRegistroPrest";
-            this.btnRegistroPrest.Size = new System.Drawing.Size(170, 61);
+            this.btnRegistroPrest.Size = new System.Drawing.Size(173, 61);
             this.btnRegistroPrest.TabIndex = 1;
             this.btnRegistroPrest.Text = "Registro de Préstamos";
             this.btnRegistroPrest.UseVisualStyleBackColor = false;
@@ -108,7 +108,7 @@
             this.btnPrestamosAct.ForeColor = System.Drawing.Color.White;
             this.btnPrestamosAct.Location = new System.Drawing.Point(3, 70);
             this.btnPrestamosAct.Name = "btnPrestamosAct";
-            this.btnPrestamosAct.Size = new System.Drawing.Size(170, 61);
+            this.btnPrestamosAct.Size = new System.Drawing.Size(185, 61);
             this.btnPrestamosAct.TabIndex = 2;
             this.btnPrestamosAct.Text = "Préstamos Activos";
             this.btnPrestamosAct.UseVisualStyleBackColor = false;
@@ -120,9 +120,9 @@
             this.btnLibrosDisp.FlatAppearance.BorderSize = 3;
             this.btnLibrosDisp.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.btnLibrosDisp.ForeColor = System.Drawing.Color.White;
-            this.btnLibrosDisp.Location = new System.Drawing.Point(179, 70);
+            this.btnLibrosDisp.Location = new System.Drawing.Point(194, 70);
             this.btnLibrosDisp.Name = "btnLibrosDisp";
-            this.btnLibrosDisp.Size = new System.Drawing.Size(170, 61);
+            this.btnLibrosDisp.Size = new System.Drawing.Size(173, 61);
             this.btnLibrosDisp.TabIndex = 3;
             this.btnLibrosDisp.Text = "Libros Disponibles";
             this.btnLibrosDisp.UseVisualStyleBackColor = false;
@@ -134,7 +134,7 @@
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(3, 137);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 61);
+            this.button1.Size = new System.Drawing.Size(185, 61);
             this.button1.TabIndex = 4;
             this.button1.Text = "Estudiantes Sancionados";
             this.button1.UseVisualStyleBackColor = false;
@@ -144,9 +144,9 @@
             this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button2.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(179, 137);
+            this.button2.Location = new System.Drawing.Point(194, 137);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(170, 61);
+            this.button2.Size = new System.Drawing.Size(173, 61);
             this.button2.TabIndex = 5;
             this.button2.Text = "Renovación";
             this.button2.UseVisualStyleBackColor = false;
@@ -158,7 +158,7 @@
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(3, 204);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(170, 61);
+            this.button3.Size = new System.Drawing.Size(185, 61);
             this.button3.TabIndex = 6;
             this.button3.Text = "Devolución";
             this.button3.UseVisualStyleBackColor = false;
@@ -168,16 +168,16 @@
             this.button4.BackColor = System.Drawing.Color.LightSkyBlue;
             this.button4.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(179, 204);
+            this.button4.Location = new System.Drawing.Point(194, 204);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(170, 61);
+            this.button4.Size = new System.Drawing.Size(173, 61);
             this.button4.TabIndex = 7;
             this.button4.Text = "Ingresar Libro Nuevo";
             this.button4.UseVisualStyleBackColor = false;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(840, 544);

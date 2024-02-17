@@ -42,7 +42,7 @@
             this.lblRegistroPrestamo.Font = new System.Drawing.Font("Consolas", 28F, System.Drawing.FontStyle.Bold);
             this.lblRegistroPrestamo.Location = new System.Drawing.Point(6, 15);
             this.lblRegistroPrestamo.Name = "lblRegistroPrestamo";
-            this.lblRegistroPrestamo.Size = new System.Drawing.Size(440, 45);
+            this.lblRegistroPrestamo.Size = new System.Drawing.Size(544, 55);
             this.lblRegistroPrestamo.TabIndex = 0;
             this.lblRegistroPrestamo.Text = "Registro De Préstamo";
             // 
@@ -51,15 +51,15 @@
             this.lblIngresoCedula.AutoSize = true;
             this.lblIngresoCedula.Location = new System.Drawing.Point(50, 97);
             this.lblIngresoCedula.Name = "lblIngresoCedula";
-            this.lblIngresoCedula.Size = new System.Drawing.Size(372, 26);
+            this.lblIngresoCedula.Size = new System.Drawing.Size(464, 32);
             this.lblIngresoCedula.TabIndex = 1;
             this.lblIngresoCedula.Text = "Ingrese la Cédula del Usuario ";
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(207, 167);
+            this.txtCedula.Location = new System.Drawing.Point(217, 162);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(139, 32);
+            this.txtCedula.Size = new System.Drawing.Size(139, 39);
             this.txtCedula.TabIndex = 7;
             this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
