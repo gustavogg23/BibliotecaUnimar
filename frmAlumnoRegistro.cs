@@ -35,9 +35,13 @@ namespace BibliotecaUnimar
 
         private void btnBuscar_Click(object sender, EventArgs e)
         {
-            AgregarDatos();
-            LimpiarDatos();
-            MessageBox.Show("Se ha registrado el estudiante");
+            if (ValidarCampos())
+            {
+                AgregarDatos();
+                LimpiarDatos();
+                MessageBox.Show("Se ha registrado el estudiante");
+            }
+            else return;
         }
 
         private void AgregarDatos()
@@ -59,6 +63,16 @@ namespace BibliotecaUnimar
             txtApellido.Clear();
             txtCedula.Clear();
             cboCarrera.SelectedIndex = -1;
+        }
+
+        private Boolean ValidarCampos()
+        {
+            if (txtNombre.Text == "" || txtApellido.Text == "" || txtCedula.Text == "" || cboCarrera.SelectedIndex == -1)
+            {
+                MessageBox.Show("Debe llenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return false;
+            }
+            return true;
         }
 
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
