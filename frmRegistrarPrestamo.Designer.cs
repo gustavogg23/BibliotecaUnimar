@@ -61,7 +61,6 @@
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(139, 32);
             this.txtCedula.TabIndex = 7;
-            this.txtCedula.TextChanged += new System.EventHandler(this.txtCedula_TextChanged);
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // lblCedula
@@ -74,7 +73,6 @@
             this.lblCedula.TabIndex = 6;
             this.lblCedula.Text = "Cédula:";
             this.lblCedula.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lblCedula.Click += new System.EventHandler(this.lblCedula_Click);
             // 
             // btnBuscar
             // 
@@ -91,9 +89,9 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(614, 0);
+            this.panel1.Location = new System.Drawing.Point(452, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(480, 551);
+            this.panel1.Size = new System.Drawing.Size(642, 551);
             this.panel1.TabIndex = 9;
             // 
             // frmRegistrarPrestamo
