@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaUnimar
 {
+    // Clase Libro
     public class Libro
     {
         // Atributos
@@ -35,6 +36,12 @@ namespace BibliotecaUnimar
         public string getCategoria()
         {
             return categoria;
+        }
+
+        // Método ToString para mostrar los datos del libro
+        public override string ToString()
+        {
+            return $"Título: {getTitulo()} \r\nAutor: {getAutor()} \r\nCategoría: {getCategoria()}\r\n";
         }
     }
 }

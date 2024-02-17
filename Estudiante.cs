@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace BibliotecaUnimar
 {
+    // Clase Estudiante
     public class Estudiante
     {
         // Atributos
@@ -44,6 +45,7 @@ namespace BibliotecaUnimar
             return carrera;
         }
 
+        // Método ToString para mostrar los datos del estudiante
         public override string ToString()
         {
             return $"Nombre: {getNombre()} \r\nApellido: {getApellido()} \r\nCédula: {getCedula()} \r\nCarrera: {getCarrera()}\r\n";

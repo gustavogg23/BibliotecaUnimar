@@ -33,60 +33,60 @@ namespace BibliotecaUnimar
         // Método para agregar un libro a la lista
         public void agregarLibro(Libro libro)
         {
-            Nodo nuevo = new Nodo(libro);
-            if (cabeza == null)
+            Nodo nuevo = new Nodo(libro); // Se define un nuevo nodo
+            if (cabeza == null) 
             {
-                cabeza = nuevo;
+                cabeza = nuevo; // El nuevo nodo es la cabeza
             }
-            else
+            else // Si la lista no está vacía
             {
-                Nodo aux = cabeza;
-                while (aux.getSiguiente() != null)
+                Nodo aux = cabeza; // Se crea un nodo auxiliar
+                while (aux.getSiguiente() != null) // Se recorre la lista hasta llegar al último nodo
                 {
-                    aux = aux.getSiguiente();
+                    aux = aux.getSiguiente(); // Se avanza al siguiente nodo
                 }
-                aux.setSiguiente(nuevo);
+                aux.setSiguiente(nuevo); // Se agrega el nuevo nodo al final de la lista
             }
-            tamaño++;
+            tamaño++; // Se incrementa el tamaño de la lista
         }
 
         // Método para buscar un libro en la lista
         public Libro buscarLibro(string titulo)
         {
-            Nodo aux = cabeza;
-            while (aux != null)
+            Nodo aux = cabeza; // Se crea un nodo auxiliar
+            while (aux != null) // Se recorre la lista
             {
-                if (aux.getValorLib().getTitulo() == titulo)
+                if (aux.getValorLib().getTitulo() == titulo) // Si se encuentra el título del libro
                 {
-                    return aux.getValorLib();
+                    return aux.getValorLib(); // Se retorna el libro
                 }
-                aux = aux.getSiguiente();
+                aux = aux.getSiguiente(); // Se avanza al siguiente nodo
             }
-            return null;
+            return null; // Si no se encuentra el libro, se retorna null
         }
 
         // Método para eliminar un libro de la lista
         public void eliminarLibro(string titulo)
         {
-            if (cabeza != null)
+            if (cabeza != null) // Si la lista no está vacía
             {
-                if (cabeza.getValorLib().getTitulo() == titulo)
+                if (cabeza.getValorLib().getTitulo() == titulo) // Si el libro a eliminar es la cabeza
                 {
-                    cabeza = cabeza.getSiguiente();
-                    tamaño--;
+                    cabeza = cabeza.getSiguiente(); // Se elimina la cabeza
+                    tamaño--; // Se decrementa el tamaño de la lista
                 }
-                else
+                else // Si el libro a eliminar no es la cabeza
                 {
-                    Nodo aux = cabeza;
-                    while (aux.getSiguiente() != null)
+                    Nodo aux = cabeza; // Se crea un nodo auxiliar
+                    while (aux.getSiguiente() != null) // Se recorre la lista
                     {
-                        if (aux.getSiguiente().getValorLib().getTitulo() == titulo)
+                        if (aux.getSiguiente().getValorLib().getTitulo() == titulo) // Si se encuentra el libro según su título
                         {
-                            aux.setSiguiente(aux.getSiguiente().getSiguiente());
-                            tamaño--;
-                            break;
+                            aux.setSiguiente(aux.getSiguiente().getSiguiente()); // Se elimina el libro
+                            tamaño--; // Se decrementa el tamaño de la lista
+                            break; // Se rompe el ciclo
                         }
-                        aux = aux.getSiguiente();
+                        aux = aux.getSiguiente(); // Se avanza al siguiente nodo
                     }
                 }
             }

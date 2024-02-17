@@ -24,6 +24,7 @@ namespace BibliotecaUnimar
             frm.ShowDialog(); // Mostrar el formulario
         }
 
+        // Botón para abrir el formulario de registro de préstamos
         private void btnRegistroPrest_Click(object sender, EventArgs e)
         {
             frmRegistrarPrestamo frm = new frmRegistrarPrestamo(); 

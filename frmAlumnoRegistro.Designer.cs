@@ -74,7 +74,7 @@
             this.lblRegistroPrestamo.Name = "lblRegistroPrestamo";
             this.lblRegistroPrestamo.Size = new System.Drawing.Size(850, 112);
             this.lblRegistroPrestamo.TabIndex = 10;
-            this.lblRegistroPrestamo.Text = "Registro De Préstamo";
+            this.lblRegistroPrestamo.Text = "Registro de Alumno";
             this.lblRegistroPrestamo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel1

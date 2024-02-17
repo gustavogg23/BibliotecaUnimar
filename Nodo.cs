@@ -13,7 +13,7 @@ namespace BibliotecaUnimar
         private Libro valorLib;
         private Nodo siguiente;
 
-        // Método Constructor
+        // Método Constructor para usar con la lista de estudiantes
         public Nodo(Estudiante valorEs)
         {
             this.valorEs = valorEs;
@@ -21,6 +21,7 @@ namespace BibliotecaUnimar
             this.siguiente = null;
         }
 
+        // Método Constructor para usar con la lista de libros
         public Nodo(Libro valorLib)
         {
             this.valorLib = valorLib;

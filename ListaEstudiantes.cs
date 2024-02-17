@@ -30,76 +30,76 @@ namespace BibliotecaUnimar
         {
             // Se define un nuevo nodo
             Nodo nuevo = new Nodo(valor);
-            if (cabeza == null)
+            if (cabeza == null) // Si la lista está vacía
             {
-                cabeza = nuevo;
+                cabeza = nuevo; // El nuevo nodo es la cabeza
             }
-            else
+            else // Si la lista no está vacía
             {
-                Nodo aux = cabeza;
-                while (aux.getSiguiente() != null)
+                Nodo aux = cabeza; // Se crea un nodo auxiliar
+                while (aux.getSiguiente() != null) // Se recorre la lista hasta llegar al último nodo
                 {
-                    aux = aux.getSiguiente();
+                    aux = aux.getSiguiente(); // Se avanza al siguiente nodo
                 }
-                aux.setSiguiente(nuevo);
+                aux.setSiguiente(nuevo); // Se agrega el nuevo nodo al final de la lista
             }
-            tamano++;
+            tamano++; // Se incrementa el tamaño de la lista
         }
 
         // Método para buscar un estudiante en la lista
         public Estudiante buscarEstudiante(string cedula)
         {
-            Nodo aux = cabeza;
-            while (aux != null)
+            Nodo aux = cabeza; // Se crea un nodo auxiliar
+            while (aux != null) // Se recorre la lista
             {
-                if (aux.getValor().getCedula() == cedula)
+                if (aux.getValor().getCedula() == cedula) // Si se encuentra la cédula del estudiante
                 {
-                    return aux.getValor();
+                    return aux.getValor(); // Se retorna el estudiante
                 }
-                aux = aux.getSiguiente();
+                aux = aux.getSiguiente(); // Se avanza al siguiente nodo
             }
-            return null;
+            return null; // Si no se encuentra el estudiante, se retorna null
         }
 
         // Método para verificar si un estudiante está registrado
         public Boolean existeEstudiante(string cedula)
         {
-            Nodo actual = cabeza;
+            Nodo actual = cabeza; // Se crea un nodo auxiliar
 
-            while (actual != null)
+            while (actual != null) // Se recorre la lista
             {
-                if (actual.getValor().getCedula() == cedula)
+                if (actual.getValor().getCedula() == cedula) // Si se encuentra la cédula del estudiante
                 {
-                    return true;
+                    return true; 
                 }
-                actual = actual.getSiguiente();
+                actual = actual.getSiguiente(); // Se avanza al siguiente nodo
             }
-            return false;
+            return false; // Si no se encuentra el estudiante, se retorna false
         }
 
         // Método para eliminar un estudiante de la lista
         public void eliminarEstudiante(string cedula)
         {
-            if (cabeza != null)
+            if (cabeza != null) // Si la lista no está vacía
             {
-                if (cabeza.getValor().getCedula() == cedula)
+                if (cabeza.getValor().getCedula() == cedula) // Si el estudiante a eliminar es la cabeza
                 {
-                    cabeza = cabeza.getSiguiente();
+                    cabeza = cabeza.getSiguiente(); // Se elimina la cabeza
                 }
-                else
+                else // Si el estudiante a eliminar no es la cabeza
                 {
-                    Nodo aux = cabeza;
-                    while (aux.getSiguiente() != null)
+                    Nodo aux = cabeza; // Se crea un nodo auxiliar
+                    while (aux.getSiguiente() != null) // Se recorre la lista
                     {
-                        if (aux.getSiguiente().getValor().getCedula() == cedula)
+                        if (aux.getSiguiente().getValor().getCedula() == cedula) // Si se encuentra el estudiante a eliminar
                         {
-                            aux.setSiguiente(aux.getSiguiente().getSiguiente());
-                            break;
+                            aux.setSiguiente(aux.getSiguiente().getSiguiente()); // Se elimina el estudiante
+                            break; // Se rompe el ciclo
                         }
-                        aux = aux.getSiguiente();
+                        aux = aux.getSiguiente(); // Se avanza al siguiente nodo
                     }
                 }
-                tamano--;
+                tamano--; // Se decrementa el tamaño de la lista
             }
         }
 
