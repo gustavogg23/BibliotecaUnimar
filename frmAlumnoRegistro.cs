@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,12 +18,14 @@ namespace BibliotecaUnimar
         {
             public static ListaEstudiantes lista = new ListaEstudiantes(); // Se crea una lista de estudiantes
         }
+
         public frmAlumnoRegistro()
         {
             InitializeComponent();
         }
 
         string nombre, apellido, cedula, carrera;
+        
 
         // Evento de tecla presionada en el campo de texto de la cédula
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
@@ -41,6 +44,7 @@ namespace BibliotecaUnimar
             {
                 AgregarDatos();
                 LimpiarDatos();
+                EscribirArchivo();
                 MessageBox.Show("Se ha registrado el estudiante");
             }
             else return;
@@ -58,6 +62,23 @@ namespace BibliotecaUnimar
             txtListEstudiantes.Text += estudiante.ToString() + "\r\n";
 
             DatosLista.lista.agregarEstudiante(estudiante); // Se agrega el objeto a la lista de estudiantes
+        }
+
+        private void EscribirArchivo()
+        {
+            string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\EstudiantesRegistrados.txt"; // Ruta del archivo
+            if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
+            {
+                StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
+                agregar.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera); // Se escriben los datos del estudiante recién registrado en el archivo
+                agregar.Close(); // Se cierra el archivo
+            }
+            else // Si el archivo no existe
+            {
+                TextWriter escribir = new StreamWriter(ruta); // Se crea un objeto de tipo TextWriter para escribir en el archivo
+                escribir.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera); // Se escriben los datos del estudiante recién registrado en el archivo
+                escribir.Close(); // Se cierra el archivo
+            }
         }
 
         // Método para limpiar los campos de texto
@@ -105,9 +126,7 @@ namespace BibliotecaUnimar
         // Botón para volver al menú principal
         private void btnVolverMenu_Click(object sender, EventArgs e)
         {
-            MenuPrincipal menu = new MenuPrincipal();
-            menu.Show();
-            this.Close(); // Cerrar el formulario actual
+            Close(); // Cerrar el formulario actual
         }
     }
 }
