@@ -59,9 +59,9 @@
             // 
             this.lblApellido.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(4, 74);
+            this.lblApellido.Location = new System.Drawing.Point(-1, 75);
             this.lblApellido.Name = "lblApellido";
-            this.lblApellido.Size = new System.Drawing.Size(133, 38);
+            this.lblApellido.Size = new System.Drawing.Size(150, 38);
             this.lblApellido.TabIndex = 1;
             this.lblApellido.Text = "Apellido:";
             this.lblApellido.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -82,16 +82,16 @@
             this.txtNombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombre.Location = new System.Drawing.Point(141, 29);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(169, 26);
+            this.txtNombre.Size = new System.Drawing.Size(169, 31);
             this.txtNombre.TabIndex = 3;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(141, 82);
+            this.txtApellido.Location = new System.Drawing.Point(141, 75);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(169, 26);
+            this.txtApellido.Size = new System.Drawing.Size(169, 31);
             this.txtApellido.TabIndex = 4;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -100,7 +100,7 @@
             this.txtCedula.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCedula.Location = new System.Drawing.Point(141, 133);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(169, 26);
+            this.txtCedula.Size = new System.Drawing.Size(169, 31);
             this.txtCedula.TabIndex = 5;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
@@ -136,9 +136,9 @@
             // 
             this.lblCarrera.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarrera.ForeColor = System.Drawing.Color.White;
-            this.lblCarrera.Location = new System.Drawing.Point(12, 177);
+            this.lblCarrera.Location = new System.Drawing.Point(3, 177);
             this.lblCarrera.Name = "lblCarrera";
-            this.lblCarrera.Size = new System.Drawing.Size(127, 38);
+            this.lblCarrera.Size = new System.Drawing.Size(136, 38);
             this.lblCarrera.TabIndex = 9;
             this.lblCarrera.Text = "Carrera:";
             this.lblCarrera.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -173,7 +173,7 @@
             "Contaduría Pública"});
             this.cboCarrera.Location = new System.Drawing.Point(141, 183);
             this.cboCarrera.Name = "cboCarrera";
-            this.cboCarrera.Size = new System.Drawing.Size(169, 23);
+            this.cboCarrera.Size = new System.Drawing.Size(169, 27);
             this.cboCarrera.TabIndex = 7;
             // 
             // btnRegistrar
@@ -205,7 +205,7 @@
             // 
             // frmRegistrarAlumno
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(840, 544);
