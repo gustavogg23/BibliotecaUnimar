@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistrarPrestamo));
             this.lblRegistroPrestamo = new System.Windows.Forms.Label();
             this.lblIngresoCedula = new System.Windows.Forms.Label();
             this.txtCedula = new System.Windows.Forms.TextBox();
@@ -106,10 +107,12 @@
             this.Controls.Add(this.lblRegistroPrestamo);
             this.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "frmRegistrarPrestamo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Registrar Préstamo";
             this.ResumeLayout(false);
             this.PerformLayout();
 
