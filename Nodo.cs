@@ -8,7 +8,7 @@ namespace BibliotecaUnimar
 {
     public class Nodo
     {
-        // Atributos de la clase Nodo Estudiantes
+        // Atributos de la clase Nodo 
         private Estudiante valorEs;
         private Libro valorLib;
         private Nodo siguiente;

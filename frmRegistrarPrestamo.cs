@@ -17,26 +17,28 @@ namespace BibliotecaUnimar
             InitializeComponent();
         }
 
+        string cedula;
         private void btnControlUsuario_Click(object sender, EventArgs e)
         {
-          ValidacionUserPrestamo();
-        }
-        private void ValidacionUserPrestamo()
-        {
-            CtrlUserRegistroPrestamo ctl = new CtrlUserRegistroPrestamo();
-            ctl.Dock = DockStyle.Fill;               
-            panel1.Controls.Add(ctl);
-            ctl.Show();
+          UsuarioRegistrado();
         }
 
-        private void txtCedula_TextChanged(object sender, EventArgs e)
+        private void UsuarioRegistrado()
         {
-
-        }
-
-        private void lblCedula_Click(object sender, EventArgs e)
-        {
-
+            cedula = txtCedula.Text;
+            if (DatosLista.lista.existeEstudiante(cedula))
+            {
+                MessageBox.Show("Usuario Registrado", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                panel1.Controls.Clear();
+                CtrlUserRegistroPrestamo ctl = new CtrlUserRegistroPrestamo();
+                ctl.Dock = DockStyle.Fill;
+                panel1.Controls.Add(ctl);
+                ctl.Show();
+            }
+            else
+            {
+                MessageBox.Show("Usuario no Registrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
 
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)

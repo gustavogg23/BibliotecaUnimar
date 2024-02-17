@@ -11,6 +11,11 @@ using System.Windows.Forms;
 
 namespace BibliotecaUnimar
 {
+    public static class DatosLista
+    {
+        public static ListaEstudiantes lista = new ListaEstudiantes();
+    }
+
     public partial class frmRegistrarAlumno : Form
     {
         public frmRegistrarAlumno()
@@ -18,7 +23,6 @@ namespace BibliotecaUnimar
             InitializeComponent();
         }
 
-        public ListaEstudiantes lista = new ListaEstudiantes();
         string nombre, apellido, cedula, carrera;
 
 
@@ -63,6 +67,7 @@ namespace BibliotecaUnimar
         {
             AgregarDatos();
             LimpiarDatos();
+            MessageBox.Show("Se ha registrado el estudiante");
         }
 
         private void AgregarDatos()
@@ -75,7 +80,7 @@ namespace BibliotecaUnimar
             Estudiante estudiante = new Estudiante(nombre, apellido, cedula, carrera);
             txtListEstudiantes.Text += estudiante.ToString() + "\r\n";
 
-            lista.agregarEstudiante(estudiante);
+            DatosLista.lista.agregarEstudiante(estudiante);
         }
 
         private void LimpiarDatos()
