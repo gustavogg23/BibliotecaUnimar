@@ -20,7 +20,7 @@ namespace BibliotecaUnimar
         // Botón para abrir el formulario de registro de estudiantes
         private void btnRegistroAlum_Click(object sender, EventArgs e)
         {
-            frmRegistrarAlumno frm = new frmRegistrarAlumno();
+            frmAlumnoRegistro frm = new frmAlumnoRegistro();
             frm.ShowDialog(); // Mostrar el formulario
         }
 

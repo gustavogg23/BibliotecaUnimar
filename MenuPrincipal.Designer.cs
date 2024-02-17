@@ -178,7 +178,7 @@
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 17F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(840, 544);
@@ -191,7 +191,7 @@
             this.MinimizeBox = false;
             this.Name = "MenuPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MenuPrincipal";
+            this.Text = "Menu Principal";
             this.flowLayoutPanel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

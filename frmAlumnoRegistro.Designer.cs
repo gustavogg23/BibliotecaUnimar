@@ -47,9 +47,10 @@
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(191, 52);
+            this.txtNombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.Location = new System.Drawing.Point(191, 48);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(160, 20);
+            this.txtNombre.Size = new System.Drawing.Size(185, 26);
             this.txtNombre.TabIndex = 9;
             this.txtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNombre_KeyPress);
             // 
@@ -132,7 +133,8 @@
             // 
             // cboCarrera
             // 
-            this.cboCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.Simple;
+            this.cboCarrera.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboCarrera.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboCarrera.FormattingEnabled = true;
             this.cboCarrera.Items.AddRange(new object[] {
             "Ingeniería de Sistema",
@@ -142,9 +144,9 @@
             "Psicología",
             "Idiomas Modernos",
             "Diseño Gráfico"});
-            this.cboCarrera.Location = new System.Drawing.Point(191, 203);
+            this.cboCarrera.Location = new System.Drawing.Point(191, 201);
             this.cboCarrera.Name = "cboCarrera";
-            this.cboCarrera.Size = new System.Drawing.Size(162, 21);
+            this.cboCarrera.Size = new System.Drawing.Size(185, 27);
             this.cboCarrera.TabIndex = 15;
             // 
             // lblCarrera
@@ -160,9 +162,10 @@
             // 
             // txtApellido
             // 
+            this.txtApellido.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtApellido.Location = new System.Drawing.Point(191, 100);
             this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(160, 20);
+            this.txtApellido.Size = new System.Drawing.Size(185, 26);
             this.txtApellido.TabIndex = 13;
             this.txtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellido_KeyPress);
             // 
@@ -179,9 +182,10 @@
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(191, 151);
+            this.txtCedula.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Location = new System.Drawing.Point(191, 150);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(160, 20);
+            this.txtCedula.Size = new System.Drawing.Size(185, 26);
             this.txtCedula.TabIndex = 11;
             this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 

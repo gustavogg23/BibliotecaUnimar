@@ -59,10 +59,6 @@
     <Compile Include="frmAlumnoRegistro.Designer.cs">
       <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmRegistrarAlumno.cs" />
-    <Compile Include="frmRegistrarAlumno.Designer.cs">
-      <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmRegistrarPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,9 +82,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmAlumnoRegistro.resx">
       <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frmRegistrarAlumno.resx">
-      <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarPrestamo.resx">
       <DependentUpon>frmRegistrarPrestamo.cs</DependentUpon>
