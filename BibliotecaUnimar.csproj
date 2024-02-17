@@ -53,6 +53,12 @@
       <DependentUpon>CtrlUserRegistroPrestamo.cs</DependentUpon>
     </Compile>
     <Compile Include="Estudiante.cs" />
+    <Compile Include="frmAlumnoRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAlumnoRegistro.Designer.cs">
+      <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarAlumno.cs" />
     <Compile Include="frmRegistrarAlumno.Designer.cs">
       <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
@@ -77,6 +83,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="CtrlUserRegistroPrestamo.resx">
       <DependentUpon>CtrlUserRegistroPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAlumnoRegistro.resx">
+      <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarAlumno.resx">
       <DependentUpon>frmRegistrarAlumno.cs</DependentUpon>
