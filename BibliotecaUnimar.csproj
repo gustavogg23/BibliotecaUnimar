@@ -46,7 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Archivo.cs" />
     <Compile Include="CtrlUserRegistroPrestamo.cs">
       <SubType>UserControl</SubType>
     </Compile>
