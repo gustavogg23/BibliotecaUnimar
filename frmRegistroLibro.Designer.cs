@@ -38,8 +38,8 @@
             this.txtAutor = new System.Windows.Forms.TextBox();
             this.BtnAgregarLibro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.cboGenero = new System.Windows.Forms.ComboBox();
             this.btnVolverMenu = new System.Windows.Forms.Button();
+            this.cboGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,6 +131,7 @@
             // BtnAgregarLibro
             // 
             this.BtnAgregarLibro.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.BtnAgregarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAgregarLibro.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.BtnAgregarLibro.ForeColor = System.Drawing.Color.White;
             this.BtnAgregarLibro.Location = new System.Drawing.Point(31, 230);
@@ -157,6 +158,21 @@
             this.panel1.Size = new System.Drawing.Size(463, 358);
             this.panel1.TabIndex = 10;
             // 
+            // btnVolverMenu
+            // 
+            this.btnVolverMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
+            this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
+            this.btnVolverMenu.Location = new System.Drawing.Point(239, 230);
+            this.btnVolverMenu.Margin = new System.Windows.Forms.Padding(2);
+            this.btnVolverMenu.Name = "btnVolverMenu";
+            this.btnVolverMenu.Size = new System.Drawing.Size(182, 75);
+            this.btnVolverMenu.TabIndex = 17;
+            this.btnVolverMenu.Text = "VOLVER AL MENÚ";
+            this.btnVolverMenu.UseVisualStyleBackColor = false;
+            this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
+            // 
             // cboGenero
             // 
             this.cboGenero.Cursor = System.Windows.Forms.Cursors.Default;
@@ -175,20 +191,6 @@
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(185, 27);
             this.cboGenero.TabIndex = 16;
-            // 
-            // btnVolverMenu
-            // 
-            this.btnVolverMenu.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
-            this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
-            this.btnVolverMenu.Location = new System.Drawing.Point(239, 230);
-            this.btnVolverMenu.Margin = new System.Windows.Forms.Padding(2);
-            this.btnVolverMenu.Name = "btnVolverMenu";
-            this.btnVolverMenu.Size = new System.Drawing.Size(182, 75);
-            this.btnVolverMenu.TabIndex = 17;
-            this.btnVolverMenu.Text = "VOLVER AL MENÚ";
-            this.btnVolverMenu.UseVisualStyleBackColor = false;
-            this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
             // 
             // frmRegistroLibro
             // 

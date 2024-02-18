@@ -16,5 +16,15 @@ namespace BibliotecaUnimar
         {
             InitializeComponent();
         }
+
+        private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+        }
     }
 }

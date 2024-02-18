@@ -28,28 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.txtTitulo = new System.Windows.Forms.TextBox();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.btnBuscarLibro = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // label1
+            // txtTitulo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(63, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 31);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Ola";
+            this.txtTitulo.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTitulo.Location = new System.Drawing.Point(200, 61);
+            this.txtTitulo.Name = "txtTitulo";
+            this.txtTitulo.Size = new System.Drawing.Size(185, 26);
+            this.txtTitulo.TabIndex = 12;
+            this.txtTitulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulo_KeyPress);
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(80, 54);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(133, 38);
+            this.lblTitulo.TabIndex = 11;
+            this.lblTitulo.Text = "Título:";
+            this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btnBuscarLibro
+            // 
+            this.btnBuscarLibro.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBuscarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnBuscarLibro.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarLibro.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarLibro.Location = new System.Drawing.Point(137, 260);
+            this.btnBuscarLibro.Name = "btnBuscarLibro";
+            this.btnBuscarLibro.Size = new System.Drawing.Size(185, 65);
+            this.btnBuscarLibro.TabIndex = 19;
+            this.btnBuscarLibro.Text = "BUSCAR";
+            this.btnBuscarLibro.UseVisualStyleBackColor = false;
             // 
             // CtrlUserRegistroPrestamo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnBuscarLibro);
+            this.Controls.Add(this.txtTitulo);
+            this.Controls.Add(this.lblTitulo);
+            this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ForeColor = System.Drawing.Color.White;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CtrlUserRegistroPrestamo";
-            this.Size = new System.Drawing.Size(527, 581);
+            this.Size = new System.Drawing.Size(459, 584);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -57,6 +86,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtTitulo;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Button btnBuscarLibro;
     }
 }

@@ -104,22 +104,22 @@ namespace BibliotecaUnimar
         // Evento de tecla presionada en el campo de texto del nombre
         private void txtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8 || e.KeyChar == 130 || e.KeyChar >= 160 && e.KeyChar <= 165)) // Si el caracter presionado no es una letra o la tecla de retroceso
+            if (!(Char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32))
             {
-                e.Handled = true; // No se escribe el caracter
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra mensaje de advertencia
-                return; // Salir del evento
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
         }
 
         // Evento de tecla presionada en el campo de texto del apellido
         private void txtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8 || e.KeyChar == 130 || e.KeyChar >= 160 && e.KeyChar <= 165)) // Si el caracter presionado no es una letra o la tecla de retroceso
+            if (!(Char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32))
             {
-                e.Handled = true; // No se escribe el caracter
-                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra mensaje de advertencia
-                return; // Salir del evento
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
             }
         }
 

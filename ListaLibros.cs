@@ -65,6 +65,21 @@ namespace BibliotecaUnimar
             return null; // Si no se encuentra el libro, se retorna null
         }
 
+        // Método para verificar si un libro existe
+        public Boolean existeLibro(string titulo)
+        {
+            Nodo actual = cabeza; // Se crea un nodo auxiliar
+            while (actual != null) // Se recorre la lista
+            {
+                if (actual.getValorLib().getTitulo() == titulo) // Si se encuentra el libro según su título
+                {
+                    return true; // Se retorna true
+                }
+                actual = actual.getSiguiente(); // Se avanza al siguiente nodo
+            }
+            return false; // Si no se encuentra el libro, se retorna false
+        }
+
         // Método para eliminar un libro de la lista
         public void eliminarLibro(string titulo)
         {
