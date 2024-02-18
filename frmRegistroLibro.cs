@@ -13,6 +13,11 @@ namespace BibliotecaUnimar
 {
     public partial class frmRegistroLibro : Form
     {
+
+        public static class DatosListaLibros
+        {
+            public static ListaLibros lista = new ListaLibros(); // Se crea una lista de libros
+        }
         public frmRegistroLibro()
         {
             InitializeComponent();
@@ -25,12 +30,12 @@ namespace BibliotecaUnimar
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            titulo= textBox1.Text;
+            titulo = txtTitulo.Text;
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            autor= textBox2.Text;
+            autor = txtAutor.Text;
         }
 
         private void BtnAgregarLibro_Click(object sender, EventArgs e)
@@ -50,7 +55,7 @@ namespace BibliotecaUnimar
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            categoria= textBox3.Text;
+            categoria = txtCategoria.Text;
         }
         private void DatosLibros()
         {    //metodo para crear y guardar datos en un archivo

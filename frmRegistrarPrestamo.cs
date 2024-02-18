@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,7 +24,21 @@ namespace BibliotecaUnimar
         // Btón para buscar el usuario registrado
         private void btnControlUsuario_Click(object sender, EventArgs e)
         {
-          UsuarioRegistrado();
+            LeerArchivoEstudiantes();
+            UsuarioRegistrado();
+        }
+
+        // Método para leer el archivo de estudiantes registrados
+        private void LeerArchivoEstudiantes()
+        {
+            string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\EstudiantesRegistrados.txt"; // Ruta del archivo
+            string[] lineas = File.ReadAllLines(ruta); // Se leen todas las líneas del archivo
+            foreach (string linea in lineas) // Se recorre cada línea del archivo
+            {
+                string[] datos = linea.Split(' '); // Se usa el método Split para separar los datos de cada línea cuando encuentre un espacio
+                Estudiante estudiante = new Estudiante(datos[0], datos[1], datos[2], datos[3]); // Se crea un objeto de tipo estudiante con los datos separados
+                DatosLista.lista.agregarEstudiante(estudiante); // Se agrega el objeto a la lista de estudiantes
+            }
         }
 
         // Método para buscar el usuario registrado
