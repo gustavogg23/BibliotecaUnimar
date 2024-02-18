@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLibrosDisponibles));
             this.lblLibrosDisponibles = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLibrosDisponibles = new System.Windows.Forms.TextBox();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.btnBuscarLibro = new System.Windows.Forms.Button();
@@ -49,15 +49,15 @@
             this.lblLibrosDisponibles.Text = "Libros Disponibles";
             this.lblLibrosDisponibles.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // textBox1
+            // txtLibrosDisponibles
             // 
-            this.textBox1.Location = new System.Drawing.Point(411, 103);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.textBox1.Size = new System.Drawing.Size(386, 432);
-            this.textBox1.TabIndex = 1;
+            this.txtLibrosDisponibles.Location = new System.Drawing.Point(411, 103);
+            this.txtLibrosDisponibles.Multiline = true;
+            this.txtLibrosDisponibles.Name = "txtLibrosDisponibles";
+            this.txtLibrosDisponibles.ReadOnly = true;
+            this.txtLibrosDisponibles.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtLibrosDisponibles.Size = new System.Drawing.Size(386, 432);
+            this.txtLibrosDisponibles.TabIndex = 1;
             // 
             // lblTitulo
             // 
@@ -90,6 +90,7 @@
             this.btnBuscarLibro.TabIndex = 18;
             this.btnBuscarLibro.Text = "BUSCAR";
             this.btnBuscarLibro.UseVisualStyleBackColor = false;
+            this.btnBuscarLibro.Click += new System.EventHandler(this.btnBuscarLibro_Click);
             // 
             // btnVolverMenu
             // 
@@ -115,7 +116,7 @@
             this.Controls.Add(this.btnBuscarLibro);
             this.Controls.Add(this.txtTitulo);
             this.Controls.Add(this.lblTitulo);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLibrosDisponibles);
             this.Controls.Add(this.lblLibrosDisponibles);
             this.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -134,7 +135,7 @@
         #endregion
 
         private System.Windows.Forms.Label lblLibrosDisponibles;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtLibrosDisponibles;
         private System.Windows.Forms.Label lblTitulo;
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Button btnBuscarLibro;

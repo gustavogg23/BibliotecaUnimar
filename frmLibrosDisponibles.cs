@@ -21,5 +21,10 @@ namespace BibliotecaUnimar
         {
             Close();
         }
+
+        private void btnBuscarLibro_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
