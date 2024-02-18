@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BibliotecaUnimar.frmRegistroLibro;
 
 namespace BibliotecaUnimar
 {
@@ -24,7 +25,13 @@ namespace BibliotecaUnimar
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)
         {
+            MostrarLibrosDisponibles();
+        }
 
+        private void MostrarLibrosDisponibles()
+        {
+            string datosLibros = DatosListaLibros.lista.mostrarLibros();
+            txtLibrosDisponibles.Text = datosLibros;
         }
     }
 }

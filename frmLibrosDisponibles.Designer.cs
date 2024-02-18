@@ -35,6 +35,8 @@
             this.txtTitulo = new System.Windows.Forms.TextBox();
             this.btnBuscarLibro = new System.Windows.Forms.Button();
             this.btnVolverMenu = new System.Windows.Forms.Button();
+            this.cboGenero = new System.Windows.Forms.ComboBox();
+            this.lblGenero = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblLibrosDisponibles
@@ -63,11 +65,11 @@
             // 
             this.lblTitulo.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitulo.ForeColor = System.Drawing.Color.White;
-            this.lblTitulo.Location = new System.Drawing.Point(45, 145);
+            this.lblTitulo.Location = new System.Drawing.Point(42, 145);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(133, 38);
             this.lblTitulo.TabIndex = 9;
-            this.lblTitulo.Text = "Título";
+            this.lblTitulo.Text = "Título:";
             this.lblTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtTitulo
@@ -84,7 +86,7 @@
             this.btnBuscarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarLibro.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarLibro.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarLibro.Location = new System.Drawing.Point(113, 223);
+            this.btnBuscarLibro.Location = new System.Drawing.Point(110, 278);
             this.btnBuscarLibro.Name = "btnBuscarLibro";
             this.btnBuscarLibro.Size = new System.Drawing.Size(185, 65);
             this.btnBuscarLibro.TabIndex = 18;
@@ -98,7 +100,7 @@
             this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
-            this.btnVolverMenu.Location = new System.Drawing.Point(103, 324);
+            this.btnVolverMenu.Location = new System.Drawing.Point(100, 379);
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.Size = new System.Drawing.Size(204, 65);
             this.btnVolverMenu.TabIndex = 19;
@@ -106,12 +108,44 @@
             this.btnVolverMenu.UseVisualStyleBackColor = false;
             this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
             // 
+            // cboGenero
+            // 
+            this.cboGenero.Cursor = System.Windows.Forms.Cursors.Default;
+            this.cboGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboGenero.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGenero.FormattingEnabled = true;
+            this.cboGenero.Items.AddRange(new object[] {
+            "Fantasía",
+            "Romance",
+            "Histórico",
+            "Ciencia Ficción",
+            "Poesía",
+            "Libros Técnicos",
+            "Libros de Texto"});
+            this.cboGenero.Location = new System.Drawing.Point(159, 210);
+            this.cboGenero.Name = "cboGenero";
+            this.cboGenero.Size = new System.Drawing.Size(185, 27);
+            this.cboGenero.TabIndex = 21;
+            // 
+            // lblGenero
+            // 
+            this.lblGenero.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
+            this.lblGenero.ForeColor = System.Drawing.Color.White;
+            this.lblGenero.Location = new System.Drawing.Point(61, 210);
+            this.lblGenero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblGenero.Name = "lblGenero";
+            this.lblGenero.Size = new System.Drawing.Size(100, 32);
+            this.lblGenero.TabIndex = 20;
+            this.lblGenero.Text = "Género:";
+            // 
             // frmLibrosDisponibles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(854, 547);
+            this.Controls.Add(this.cboGenero);
+            this.Controls.Add(this.lblGenero);
             this.Controls.Add(this.btnVolverMenu);
             this.Controls.Add(this.btnBuscarLibro);
             this.Controls.Add(this.txtTitulo);
@@ -140,5 +174,7 @@
         private System.Windows.Forms.TextBox txtTitulo;
         private System.Windows.Forms.Button btnBuscarLibro;
         private System.Windows.Forms.Button btnVolverMenu;
+        private System.Windows.Forms.ComboBox cboGenero;
+        private System.Windows.Forms.Label lblGenero;
     }
 }

@@ -91,5 +91,18 @@ namespace BibliotecaUnimar
                 }
             }
         }
+
+        // Método para mostrar los libros de la lista
+        public string mostrarLibros()
+        {
+            string listaLibros = ""; // Se crea una cadena vacía
+            Nodo aux = cabeza; // Se crea un nodo auxiliar
+            while (aux != null) // Se recorre la lista
+            {
+                listaLibros += aux.getValorLib().ToString() + "\r\n"; // Se concatenan los títulos de los libros
+                aux = aux.getSiguiente(); // Se avanza al siguiente nodo
+            }
+            return listaLibros; // Se retorna la cadena con los títulos de los libros
+        }
     }
 }

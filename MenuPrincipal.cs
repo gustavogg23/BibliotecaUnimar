@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static BibliotecaUnimar.frmRegistroLibro;
 
 namespace BibliotecaUnimar
 {
@@ -54,8 +56,28 @@ namespace BibliotecaUnimar
 
         private void btnLibrosDisp_Click(object sender, EventArgs e)
         {
+            LeerArchivoLibrosDisponible();
             frmLibrosDisponibles frm = new frmLibrosDisponibles();
             frm.ShowDialog();
+        }
+
+        private void LeerArchivoLibrosDisponible()
+        {
+            try
+            {
+                string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\LibrosIngresados.txt";
+                string[] lineas = File.ReadAllLines(ruta);
+                foreach (string linea in lineas)
+                {
+                    string[] datos = linea.Split(' ');
+                    Libro libro = new Libro(datos[0], datos[1], datos[2], true);
+                    DatosListaLibros.lista.agregarLibro(libro);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al leer el archivo de libros disponibles: " + ex.Message);
+            }
         }
     }
 }
