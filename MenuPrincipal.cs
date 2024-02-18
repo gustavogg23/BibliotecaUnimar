@@ -51,5 +51,11 @@ namespace BibliotecaUnimar
         {
             Close();
         }
+
+        private void btnLibrosDisp_Click(object sender, EventArgs e)
+        {
+            frmLibrosDisponibles frm = new frmLibrosDisponibles();
+            frm.ShowDialog();
+        }
     }
 }

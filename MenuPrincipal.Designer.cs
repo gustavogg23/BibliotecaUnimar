@@ -128,6 +128,7 @@
             this.btnLibrosDisp.TabIndex = 3;
             this.btnLibrosDisp.Text = "Libros Disponibles";
             this.btnLibrosDisp.UseVisualStyleBackColor = false;
+            this.btnLibrosDisp.Click += new System.EventHandler(this.btnLibrosDisp_Click);
             // 
             // button1
             // 
