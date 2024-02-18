@@ -46,5 +46,10 @@ namespace BibliotecaUnimar
         {
 
         }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }

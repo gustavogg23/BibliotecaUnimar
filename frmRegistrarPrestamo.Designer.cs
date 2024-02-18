@@ -35,6 +35,7 @@
             this.lblCedula = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnVolverMenu = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblRegistroPrestamo
@@ -58,7 +59,7 @@
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(217, 162);
+            this.txtCedula.Location = new System.Drawing.Point(211, 167);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(139, 32);
             this.txtCedula.TabIndex = 7;
@@ -83,7 +84,7 @@
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(100, 41);
             this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar ";
+            this.btnBuscar.Text = "BUSCAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnControlUsuario_Click);
             // 
@@ -96,10 +97,25 @@
             this.panel1.TabIndex = 9;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // btnVolverMenu
+            // 
+            this.btnVolverMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
+            this.btnVolverMenu.Location = new System.Drawing.Point(118, 309);
+            this.btnVolverMenu.Name = "btnVolverMenu";
+            this.btnVolverMenu.Size = new System.Drawing.Size(201, 65);
+            this.btnVolverMenu.TabIndex = 19;
+            this.btnVolverMenu.Text = "VOLVER AL MENÚ";
+            this.btnVolverMenu.UseVisualStyleBackColor = false;
+            this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
+            // 
             // frmRegistrarPrestamo
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(1094, 551);
+            this.Controls.Add(this.btnVolverMenu);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtCedula);
@@ -108,6 +124,7 @@
             this.Controls.Add(this.lblRegistroPrestamo);
             this.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.ForeColor = System.Drawing.Color.White;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -129,5 +146,6 @@
         private System.Windows.Forms.Label lblCedula;
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnVolverMenu;
     }
 }

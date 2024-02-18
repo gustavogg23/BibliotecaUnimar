@@ -49,7 +49,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.Controls.Add(this.label1);
             this.Name = "CtrlUserRegistroPrestamo";
-            this.Size = new System.Drawing.Size(709, 384);
+            this.Size = new System.Drawing.Size(527, 581);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -22,7 +22,8 @@ namespace BibliotecaUnimar
         {
             InitializeComponent();
         }
-        string titulo, autor, categoria; 
+        string titulo, autor, genero; 
+        Boolean disponible = true;
         private void label4_Click(object sender, EventArgs e)
         {
 
@@ -30,40 +31,97 @@ namespace BibliotecaUnimar
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            titulo = txtTitulo.Text;
+            
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            autor = txtAutor.Text;
+            
         }
 
         private void BtnAgregarLibro_Click(object sender, EventArgs e)
         {
-            DatosLibros();
+            if (ValidarCampos())
+            {
+                AgregarDatos();
+                LimpiarTexto();
+                DatosLibros();
+                MessageBox.Show("Se ha registrado el libro");
+            }
+            else return;
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void AgregarDatos()
         {
-            TextReader Leer = new StreamReader("LibrosUnimar");
-            //Leer.ReadToEnd();
-            // sirve para leer el documento 
-            MessageBox.Show(Leer.ReadToEnd());
-            // sirve para leer el documento y salga una ventana emergente con lo q este escrito en eol documento
-            Leer.Close();
+            titulo = txtTitulo.Text;
+            autor = txtAutor.Text;
+            genero = cboGenero.Text;
+
+            Libro libro = new Libro(titulo, autor, genero, disponible);
+            DatosListaLibros.lista.agregarLibro(libro);
+        }
+
+        private Boolean ValidarCampos()
+        {
+            if (txtTitulo.Text == "" || txtAutor.Text == "" || cboGenero.SelectedIndex == -1) // Si alguno de los campos está vacío
+            {
+                MessageBox.Show("Debe llenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
+                return false; // No se puede continuar
+            }
+            return true; // Todos los campos están llenos
+        }
+
+        private void LimpiarTexto()
+        {
+            txtAutor.Clear();
+            cboGenero.SelectedIndex = -1;
+            txtTitulo.Clear();
+        }
+
+        private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8 || e.KeyChar == 130 || e.KeyChar >= 160 && e.KeyChar <= 165)) // Si el caracter presionado no es una letra o la tecla de retroceso
+            {
+                e.Handled = true; // No se escribe el caracter
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra mensaje de advertencia
+                return; // Salir del evento
+            }
+        }
+
+        private void txtAutor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(e.KeyChar >= 65 && e.KeyChar <= 90 || e.KeyChar >= 97 && e.KeyChar <= 122 || e.KeyChar == 8 || e.KeyChar == 130 || e.KeyChar >= 160 && e.KeyChar <= 165)) // Si el caracter presionado no es una letra o la tecla de retroceso
+            {
+                e.Handled = true; // No se escribe el caracter
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra mensaje de advertencia
+                return; // Salir del evento
+            }
+        }
+
+        private void btnVolverMenu_Click(object sender, EventArgs e)
+        {
+            Close(); // Cerrar el formulario actual
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
         {
-            categoria = txtCategoria.Text;
+            
         }
         private void DatosLibros()
-        {    //metodo para crear y guardar datos en un archivo
-            StreamWriter Libros = new StreamWriter("LibrosUnimar");
-            Libros.WriteLine(titulo + " " + autor + " " + categoria);
-            Libros.Close();
-
-            MessageBox.Show("Se Agrego Correctamente el libro");
+        {
+            string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\LibrosIngresados.txt"; // Ruta del archivo
+            if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
+            {
+                StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
+                agregar.WriteLine(titulo + " " + autor + " " + genero); // Se escriben los datos del libro recién registrado en el archivo
+                agregar.Close();
+            }
+            else // Si el archivo no existe
+            {
+                TextWriter escribir = new StreamWriter(ruta); // Se crea un objeto de tipo TextWriter para escribir en el archivo
+                escribir.WriteLine(titulo + " " + autor + " " + genero);
+                escribir.Close();
+            }
         }
     }
 }

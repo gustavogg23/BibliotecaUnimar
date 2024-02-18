@@ -34,7 +34,7 @@
             this.lblRegistroPrestamo = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVolverMenu = new System.Windows.Forms.Button();
-            this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.txtListEstudiantes = new System.Windows.Forms.TextBox();
             this.cboCarrera = new System.Windows.Forms.ComboBox();
             this.lblCarrera = new System.Windows.Forms.Label();
@@ -80,7 +80,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.btnVolverMenu);
-            this.panel1.Controls.Add(this.btnBuscar);
+            this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.txtListEstudiantes);
             this.panel1.Controls.Add(this.cboCarrera);
             this.panel1.Controls.Add(this.lblCarrera);
@@ -109,19 +109,19 @@
             this.btnVolverMenu.UseVisualStyleBackColor = false;
             this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
             // 
-            // btnBuscar
+            // btnRegistrar
             // 
-            this.btnBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBuscar.ForeColor = System.Drawing.Color.White;
-            this.btnBuscar.Location = new System.Drawing.Point(62, 278);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(185, 65);
-            this.btnBuscar.TabIndex = 17;
-            this.btnBuscar.Text = "REGISTRAR";
-            this.btnBuscar.UseVisualStyleBackColor = false;
-            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
+            this.btnRegistrar.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegistrar.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(62, 278);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(185, 65);
+            this.btnRegistrar.TabIndex = 17;
+            this.btnRegistrar.Text = "REGISTRAR";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // txtListEstudiantes
             // 
@@ -234,7 +234,7 @@
         private System.Windows.Forms.TextBox txtListEstudiantes;
         private System.Windows.Forms.ComboBox cboCarrera;
         private System.Windows.Forms.Label lblCarrera;
-        private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnRegistrar;
         private System.Windows.Forms.Button btnVolverMenu;
     }
 }
