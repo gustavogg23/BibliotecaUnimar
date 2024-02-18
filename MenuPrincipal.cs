@@ -35,5 +35,16 @@ namespace BibliotecaUnimar
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            frmRegistroLibro frm = new frmRegistroLibro();
+            frm.ShowDialog();
+        }
+
+        private void MenuPrincipal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

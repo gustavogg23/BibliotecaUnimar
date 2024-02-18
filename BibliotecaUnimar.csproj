@@ -65,6 +65,12 @@
     <Compile Include="frmRegistrarPrestamo.Designer.cs">
       <DependentUpon>frmRegistrarPrestamo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRegistroLibro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRegistroLibro.Designer.cs">
+      <DependentUpon>frmRegistroLibro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Libro.cs" />
     <Compile Include="ListaEstudiantes.cs" />
     <Compile Include="ListaLibros.cs" />
@@ -85,6 +91,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarPrestamo.resx">
       <DependentUpon>frmRegistrarPrestamo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRegistroLibro.resx">
+      <DependentUpon>frmRegistroLibro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>

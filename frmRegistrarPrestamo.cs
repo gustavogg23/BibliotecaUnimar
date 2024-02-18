@@ -54,6 +54,11 @@ namespace BibliotecaUnimar
                 return; // Salir del evento
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
