@@ -19,7 +19,7 @@ namespace BibliotecaUnimar
             InitializeComponent();
         }
 
-        string cedula;
+        string cedula, titulo;
 
         // Btón para buscar el usuario registrado
         private void btnControlUsuario_Click(object sender, EventArgs e)
@@ -68,11 +68,7 @@ namespace BibliotecaUnimar
             cedula = txtCedula.Text; // Se obtiene la cédula ingresada de la caja de texto
             if (DatosLista.lista.existeEstudiante(cedula)) // Se utiliza el método existeEstudiante de la lista de estudiantes para verificar si está registrado
             {
-                panel1.Controls.Clear();
-                CtrlUserRegistroPrestamo ctl = new CtrlUserRegistroPrestamo(); // Se crea un control de usuario para el registro de préstamo
-                ctl.Dock = DockStyle.Fill;
-                panel1.Controls.Add(ctl);
-                ctl.Show();
+                // TODO
             }
             else // Si no está registrado
             {
