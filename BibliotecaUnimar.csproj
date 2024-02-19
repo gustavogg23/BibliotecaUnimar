@@ -46,12 +46,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CtrlUserRegistroPrestamo.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="CtrlUserRegistroPrestamo.Designer.cs">
-      <DependentUpon>CtrlUserRegistroPrestamo.cs</DependentUpon>
-    </Compile>
     <Compile Include="Estudiante.cs" />
     <Compile Include="frmAlumnoRegistro.cs">
       <SubType>Form</SubType>
@@ -89,9 +83,6 @@
     <Compile Include="Nodo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="CtrlUserRegistroPrestamo.resx">
-      <DependentUpon>CtrlUserRegistroPrestamo.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmAlumnoRegistro.resx">
       <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
     </EmbeddedResource>
