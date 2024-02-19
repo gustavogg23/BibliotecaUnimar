@@ -30,7 +30,7 @@ namespace BibliotecaUnimar
                 LeerArchivoEstudiantes(); // Se lee el archivo de estudiantes registrados
                 LeerArchivoLibros(); // Se lee el archivo de libros registrados
                 UsuarioRegistrado(); // Se busca el usuario registrado
-                EscribirArchivo(); // Se escribe el préstamo en el archivo
+                //EscribirArchivo(); // Se escribe el préstamo en el archivo
             }
             else return; // Si no, no se puede continuar
         }
@@ -106,27 +106,28 @@ namespace BibliotecaUnimar
             txtLibro.Clear();
         }
 
-        private void EscribirArchivo()
-        {
-            string cedula = txtCedula.Text;
-            string titulo = txtLibro.Text;
-            string nombre = DatosLista.lista.buscarEstudiante(cedula).getNombre();
-            string apellido = DatosLista.lista.buscarEstudiante(cedula).getApellido();
-            string carrera = DatosLista.lista.buscarEstudiante(cedula).getCarrera();
-            string ruta = @"PrestamosActivos.txt"; // Ruta del archivo
-            if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
-            {
-                StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
-                agregar.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera + " " + titulo); // Se escriben los datos del estudiante recién registrado en el archivo
-                agregar.Close(); // Se cierra el archivo
-            }
-            else // Si el archivo no existe
-            {
-                TextWriter escribir = new StreamWriter(ruta); // Se crea un objeto de tipo TextWriter para escribir en el archivo
-                escribir.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera + " " + titulo); // Se escriben los datos del estudiante recién registrado en el archivo
-                escribir.Close(); // Se cierra el archivo
-            }
-        }
+        //private void EscribirArchivo()
+        //{
+        //    cedula = txtCedula.Text;
+        //    Estudiante estudiante = DatosLista.lista.buscarEstudiante(cedula);
+        //    string nombre = estudiante.getNombre();
+        //    string apellido = estudiante.getApellido();
+        //    string carrera = estudiante.getCarrera();
+        //    titulo = txtLibro.Text;
+        //    string ruta = @"PrestamosActivos.txt"; // Ruta del archivo
+        //    if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
+        //    {
+        //        StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
+        //        agregar.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera + " " + titulo); // Se escriben los datos del estudiante recién registrado en el archivo
+        //        agregar.Close(); // Se cierra el archivo
+        //    }
+        //    else // Si el archivo no existe
+        //    {
+        //        TextWriter escribir = new StreamWriter(ruta); // Se crea un objeto de tipo TextWriter para escribir en el archivo
+        //        escribir.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera + " " + titulo); // Se escriben los datos del estudiante recién registrado en el archivo
+        //        escribir.Close(); // Se cierra el archivo
+        //    }
+        //}
 
         // Evento de tecla presionada en el campo de texto de la cédula
         private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
