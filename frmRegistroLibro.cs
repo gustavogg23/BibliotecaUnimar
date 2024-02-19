@@ -22,7 +22,7 @@ namespace BibliotecaUnimar
         {
             InitializeComponent();
         }
-        string titulo, autor, genero; 
+        string titulo, nombreAutor, apellidoAutor, genero; 
         Boolean disponible = true;
         private void label4_Click(object sender, EventArgs e)
         {
@@ -54,16 +54,17 @@ namespace BibliotecaUnimar
         private void AgregarDatos()
         {
             titulo = txtTitulo.Text;
-            autor = txtAutor.Text;
+            nombreAutor = txtNombreAutor.Text;
+            apellidoAutor = txtApellidoAutor.Text;
             genero = cboGenero.Text;
 
-            Libro libro = new Libro(titulo, autor, genero, disponible);
+            Libro libro = new Libro(titulo, nombreAutor, apellidoAutor, genero, disponible);
             DatosListaLibros.lista.agregarLibro(libro);
         }
 
         private Boolean ValidarCampos()
         {
-            if (txtTitulo.Text == "" || txtAutor.Text == "" || cboGenero.SelectedIndex == -1) // Si alguno de los campos está vacío
+            if (txtTitulo.Text == "" || txtNombreAutor.Text == "" || cboGenero.SelectedIndex == -1) // Si alguno de los campos está vacío
             {
                 MessageBox.Show("Debe llenar todos los campos", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
                 return false; // No se puede continuar
@@ -73,7 +74,8 @@ namespace BibliotecaUnimar
 
         private void LimpiarTexto()
         {
-            txtAutor.Clear();
+            txtNombreAutor.Clear();
+            txtApellidoAutor.Clear();
             cboGenero.SelectedIndex = -1;
             txtTitulo.Clear();
         }
@@ -98,6 +100,16 @@ namespace BibliotecaUnimar
             }
         }
 
+        private void txtApellidoAutor_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(Char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
+        }
+
         private void btnVolverMenu_Click(object sender, EventArgs e)
         {
             Close(); // Cerrar el formulario actual
@@ -109,17 +121,17 @@ namespace BibliotecaUnimar
         }
         private void DatosLibros()
         {
-            string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\LibrosIngresados.txt"; // Ruta del archivo
+            string ruta = @"LibrosIngresados.txt"; // Ruta del archivo
             if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
             {
                 StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
-                agregar.WriteLine(titulo + " " + autor + " " + genero); // Se escriben los datos del libro recién registrado en el archivo
+                agregar.WriteLine(titulo + " " + nombreAutor + " " + apellidoAutor + " " + genero); // Se escriben los datos del libro recién registrado en el archivo
                 agregar.Close();
             }
             else // Si el archivo no existe
             {
                 TextWriter escribir = new StreamWriter(ruta); // Se crea un objeto de tipo TextWriter para escribir en el archivo
-                escribir.WriteLine(titulo + " " + autor + " " + genero);
+                escribir.WriteLine(titulo + " " + nombreAutor + " " + apellidoAutor + " " + genero);
                 escribir.Close();
             }
         }

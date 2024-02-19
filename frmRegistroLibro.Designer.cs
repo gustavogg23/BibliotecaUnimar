@@ -33,11 +33,13 @@
             this.lblDatosLibros = new System.Windows.Forms.Label();
             this.lblGenero = new System.Windows.Forms.Label();
             this.lblTitulo = new System.Windows.Forms.Label();
-            this.lblAutor = new System.Windows.Forms.Label();
+            this.lblnombreAutor = new System.Windows.Forms.Label();
             this.txtTitulo = new System.Windows.Forms.TextBox();
-            this.txtAutor = new System.Windows.Forms.TextBox();
+            this.txtNombreAutor = new System.Windows.Forms.TextBox();
             this.BtnAgregarLibro = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtApellidoAutor = new System.Windows.Forms.TextBox();
+            this.lblApellidoAutor = new System.Windows.Forms.Label();
             this.btnVolverMenu = new System.Windows.Forms.Button();
             this.cboGenero = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
@@ -61,7 +63,7 @@
             this.lblDatosLibros.AutoSize = true;
             this.lblDatosLibros.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.lblDatosLibros.ForeColor = System.Drawing.Color.White;
-            this.lblDatosLibros.Location = new System.Drawing.Point(261, 136);
+            this.lblDatosLibros.Location = new System.Drawing.Point(261, 92);
             this.lblDatosLibros.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatosLibros.Name = "lblDatosLibros";
             this.lblDatosLibros.Size = new System.Drawing.Size(336, 26);
@@ -72,7 +74,7 @@
             // 
             this.lblGenero.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
             this.lblGenero.ForeColor = System.Drawing.Color.White;
-            this.lblGenero.Location = new System.Drawing.Point(107, 156);
+            this.lblGenero.Location = new System.Drawing.Point(108, 210);
             this.lblGenero.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblGenero.Name = "lblGenero";
             this.lblGenero.Size = new System.Drawing.Size(100, 32);
@@ -91,16 +93,16 @@
             this.lblTitulo.Text = "Titulo:";
             this.lblTitulo.Click += new System.EventHandler(this.label4_Click);
             // 
-            // lblAutor
+            // lblnombreAutor
             // 
-            this.lblAutor.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
-            this.lblAutor.ForeColor = System.Drawing.Color.White;
-            this.lblAutor.Location = new System.Drawing.Point(119, 101);
-            this.lblAutor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblAutor.Name = "lblAutor";
-            this.lblAutor.Size = new System.Drawing.Size(94, 22);
-            this.lblAutor.TabIndex = 4;
-            this.lblAutor.Text = "Autor:";
+            this.lblnombreAutor.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
+            this.lblnombreAutor.ForeColor = System.Drawing.Color.White;
+            this.lblnombreAutor.Location = new System.Drawing.Point(35, 100);
+            this.lblnombreAutor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblnombreAutor.Name = "lblnombreAutor";
+            this.lblnombreAutor.Size = new System.Drawing.Size(168, 22);
+            this.lblnombreAutor.TabIndex = 4;
+            this.lblnombreAutor.Text = "Nombre Autor:";
             // 
             // txtTitulo
             // 
@@ -115,18 +117,18 @@
             this.txtTitulo.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             this.txtTitulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtTitulo_KeyPress);
             // 
-            // txtAutor
+            // txtNombreAutor
             // 
-            this.txtAutor.BackColor = System.Drawing.Color.White;
-            this.txtAutor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
-            this.txtAutor.ForeColor = System.Drawing.Color.Black;
-            this.txtAutor.Location = new System.Drawing.Point(205, 102);
-            this.txtAutor.Margin = new System.Windows.Forms.Padding(2);
-            this.txtAutor.Name = "txtAutor";
-            this.txtAutor.Size = new System.Drawing.Size(185, 26);
-            this.txtAutor.TabIndex = 6;
-            this.txtAutor.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
-            this.txtAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAutor_KeyPress);
+            this.txtNombreAutor.BackColor = System.Drawing.Color.White;
+            this.txtNombreAutor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.txtNombreAutor.ForeColor = System.Drawing.Color.Black;
+            this.txtNombreAutor.Location = new System.Drawing.Point(206, 100);
+            this.txtNombreAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtNombreAutor.Name = "txtNombreAutor";
+            this.txtNombreAutor.Size = new System.Drawing.Size(185, 26);
+            this.txtNombreAutor.TabIndex = 6;
+            this.txtNombreAutor.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.txtNombreAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAutor_KeyPress);
             // 
             // BtnAgregarLibro
             // 
@@ -134,7 +136,7 @@
             this.BtnAgregarLibro.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnAgregarLibro.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.BtnAgregarLibro.ForeColor = System.Drawing.Color.White;
-            this.BtnAgregarLibro.Location = new System.Drawing.Point(31, 230);
+            this.BtnAgregarLibro.Location = new System.Drawing.Point(40, 281);
             this.BtnAgregarLibro.Margin = new System.Windows.Forms.Padding(2);
             this.BtnAgregarLibro.Name = "BtnAgregarLibro";
             this.BtnAgregarLibro.Size = new System.Drawing.Size(182, 75);
@@ -145,18 +147,43 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtApellidoAutor);
+            this.panel1.Controls.Add(this.lblApellidoAutor);
             this.panel1.Controls.Add(this.btnVolverMenu);
             this.panel1.Controls.Add(this.cboGenero);
             this.panel1.Controls.Add(this.BtnAgregarLibro);
-            this.panel1.Controls.Add(this.txtAutor);
+            this.panel1.Controls.Add(this.txtNombreAutor);
             this.panel1.Controls.Add(this.txtTitulo);
-            this.panel1.Controls.Add(this.lblAutor);
+            this.panel1.Controls.Add(this.lblnombreAutor);
             this.panel1.Controls.Add(this.lblTitulo);
             this.panel1.Controls.Add(this.lblGenero);
-            this.panel1.Location = new System.Drawing.Point(185, 185);
+            this.panel1.Location = new System.Drawing.Point(185, 133);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(463, 358);
+            this.panel1.Size = new System.Drawing.Size(463, 410);
             this.panel1.TabIndex = 10;
+            // 
+            // txtApellidoAutor
+            // 
+            this.txtApellidoAutor.BackColor = System.Drawing.Color.White;
+            this.txtApellidoAutor.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold);
+            this.txtApellidoAutor.ForeColor = System.Drawing.Color.Black;
+            this.txtApellidoAutor.Location = new System.Drawing.Point(206, 154);
+            this.txtApellidoAutor.Margin = new System.Windows.Forms.Padding(2);
+            this.txtApellidoAutor.Name = "txtApellidoAutor";
+            this.txtApellidoAutor.Size = new System.Drawing.Size(185, 26);
+            this.txtApellidoAutor.TabIndex = 19;
+            this.txtApellidoAutor.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtApellidoAutor_KeyPress);
+            // 
+            // lblApellidoAutor
+            // 
+            this.lblApellidoAutor.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
+            this.lblApellidoAutor.ForeColor = System.Drawing.Color.White;
+            this.lblApellidoAutor.Location = new System.Drawing.Point(10, 153);
+            this.lblApellidoAutor.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblApellidoAutor.Name = "lblApellidoAutor";
+            this.lblApellidoAutor.Size = new System.Drawing.Size(200, 22);
+            this.lblApellidoAutor.TabIndex = 18;
+            this.lblApellidoAutor.Text = "Apellido Autor:";
             // 
             // btnVolverMenu
             // 
@@ -164,7 +191,7 @@
             this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
-            this.btnVolverMenu.Location = new System.Drawing.Point(239, 230);
+            this.btnVolverMenu.Location = new System.Drawing.Point(248, 281);
             this.btnVolverMenu.Margin = new System.Windows.Forms.Padding(2);
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.Size = new System.Drawing.Size(182, 75);
@@ -186,8 +213,9 @@
             "Ciencia Ficción",
             "Poesía",
             "Libros Técnicos",
-            "Libros de Texto"});
-            this.cboGenero.Location = new System.Drawing.Point(205, 156);
+            "Libros de Texto",
+            "Tesis de Grado"});
+            this.cboGenero.Location = new System.Drawing.Point(206, 210);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(185, 27);
             this.cboGenero.TabIndex = 16;
@@ -224,12 +252,14 @@
         private System.Windows.Forms.Label lblDatosLibros;
         private System.Windows.Forms.Label lblGenero;
         private System.Windows.Forms.Label lblTitulo;
-        private System.Windows.Forms.Label lblAutor;
+        private System.Windows.Forms.Label lblnombreAutor;
         private System.Windows.Forms.TextBox txtTitulo;
-        private System.Windows.Forms.TextBox txtAutor;
+        private System.Windows.Forms.TextBox txtNombreAutor;
         private System.Windows.Forms.Button BtnAgregarLibro;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ComboBox cboGenero;
         private System.Windows.Forms.Button btnVolverMenu;
+        private System.Windows.Forms.TextBox txtApellidoAutor;
+        private System.Windows.Forms.Label lblApellidoAutor;
     }
 }

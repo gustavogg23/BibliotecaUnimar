@@ -66,7 +66,7 @@ namespace BibliotecaUnimar
 
         private void EscribirArchivo()
         {
-            string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\EstudiantesRegistrados.txt"; // Ruta del archivo
+            string ruta = @"EstudiantesRegistrados.txt"; // Ruta del archivo
             if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
             {
                 StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo

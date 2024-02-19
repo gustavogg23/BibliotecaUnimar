@@ -11,15 +11,17 @@ namespace BibliotecaUnimar
     {
         // Atributos
         private string titulo;
-        private string autor;
+        private string nombreAutor;
+        private string apellidoAutor;
         private string genero;
         private Boolean disponible = true;
 
         // Método Constructor
-        public Libro(string titulo, string autor, string genero, Boolean disponible)
+        public Libro(string titulo, string nombreAutor, string apellidoAutor, string genero, Boolean disponible)
         {
             this.titulo = titulo;
-            this.autor = autor;
+            this.nombreAutor = nombreAutor;
+            this.apellidoAutor = apellidoAutor;
             this.genero = genero;
             this.disponible = disponible;
         }
@@ -30,9 +32,14 @@ namespace BibliotecaUnimar
             return titulo;
         }
 
-        public string getAutor()
+        public string getnombreAutor()
         {
-            return autor;
+            return nombreAutor;
+        }
+
+        public string getApellidoAutor()
+        {
+            return apellidoAutor;
         }
 
         public string getGenero()
@@ -53,7 +60,7 @@ namespace BibliotecaUnimar
         // Método ToString para mostrar los datos del libro
         public override string ToString()
         {
-            return $"Título: {getTitulo()} \r\nAutor: {getAutor()} \r\nGénero: {getGenero()}\r\n";
+            return $"Título: {getTitulo()} \r\nAutor: {getnombreAutor()}" + " " + $"{getApellidoAutor()} \r\nGénero: {getGenero()}\r\n";
         }
     }
 }

@@ -65,13 +65,24 @@ namespace BibliotecaUnimar
         {
             try
             {
-                string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\LibrosIngresados.txt";
+                string ruta = @"LibrosIngresados.txt";
                 string[] lineas = File.ReadAllLines(ruta);
                 foreach (string linea in lineas)
                 {
                     string[] datos = linea.Split(' ');
-                    Libro libro = new Libro(datos[0], datos[1], datos[2], true);
-                    DatosListaLibros.lista.agregarLibro(libro);
+                    datos[3] = Convert.ToString(datos[3]);
+                    if (datos[3] == "True")
+                    {
+                        Libro libro = new Libro(datos[0], datos[1], datos[2], datos[3], true);
+                        DatosListaLibros.lista.agregarLibro(libro);
+                    }
+                    else
+                    {
+                        Libro libro = new Libro(datos[0], datos[1], datos[2], datos[3], false);
+                        DatosListaLibros.lista.agregarLibro(libro);
+                    }
+
+                    
                 }
             }
             catch (Exception ex)
