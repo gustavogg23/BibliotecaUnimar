@@ -97,7 +97,7 @@
             this.btnRegistroPrest.Name = "btnRegistroPrest";
             this.btnRegistroPrest.Size = new System.Drawing.Size(173, 61);
             this.btnRegistroPrest.TabIndex = 1;
-            this.btnRegistroPrest.Text = "Registro de Préstamos";
+            this.btnRegistroPrest.Text = "Registrar Préstamos";
             this.btnRegistroPrest.UseVisualStyleBackColor = false;
             this.btnRegistroPrest.Click += new System.EventHandler(this.btnRegistroPrest_Click);
             // 

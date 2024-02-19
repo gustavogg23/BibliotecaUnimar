@@ -110,11 +110,12 @@
             this.txtLibro.Name = "txtLibro";
             this.txtLibro.Size = new System.Drawing.Size(148, 32);
             this.txtLibro.TabIndex = 21;
+            this.txtLibro.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtLibro_KeyPress);
             // 
             // frmRegistrarPrestamo
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(853, 548);
+            this.ClientSize = new System.Drawing.Size(855, 526);
             this.Controls.Add(this.txtLibro);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnVolverMenu);

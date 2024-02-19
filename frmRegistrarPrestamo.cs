@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BibliotecaUnimar.frmAlumnoRegistro;
+using static BibliotecaUnimar.frmRegistroLibro;
 
 namespace BibliotecaUnimar
 {
@@ -21,12 +22,13 @@ namespace BibliotecaUnimar
 
         string cedula, titulo;
 
-        // Btón para buscar el usuario registrado
+        // Botón para buscar el usuario registrado
         private void btnControlUsuario_Click(object sender, EventArgs e)
         {
             if (ValidarCampos()) // Si los campos están llenos
             {
                 LeerArchivoEstudiantes(); // Se lee el archivo de estudiantes registrados
+                LeerArchivoLibros(); // Se lee el archivo de libros registrados
                 UsuarioRegistrado(); // Se busca el usuario registrado
             }
             else return; // Si no, no se puede continuar
@@ -34,7 +36,7 @@ namespace BibliotecaUnimar
 
         private Boolean ValidarCampos()
         {
-            if (txtCedula.Text == "") // Si la caja de texto está vacía
+            if (txtCedula.Text == "" || txtLibro.Text == "") // Si la caja de texto está vacía
             {
                 MessageBox.Show("Debe ingresar la cédula del estudiante que desea solicitar un préstamo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
                 return false; // No se puede continuar
@@ -58,7 +60,26 @@ namespace BibliotecaUnimar
             }
             catch (Exception ex) // Si hay un error
             {
-                MessageBox.Show("No existe un archivo con los registros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
+                MessageBox.Show("No existe un archivo con los estudiantes", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
+            }
+        }
+
+        private void LeerArchivoLibros()
+        {
+            try
+            {
+                string ruta = @"C:\\Users\\gusta\\Documentos\\UNIMAR\\TRIMESTRE V\\Programación 2\\BibliotecaUnimar\\LibrosIngresados.txt";
+                string[] lineas = File.ReadAllLines(ruta);
+                foreach (string linea in lineas)
+                {
+                    string[] datos = linea.Split(' ');
+                    Libro libro = new Libro(datos[0], datos[1], datos[2], true);
+                    DatosListaLibros.lista.agregarLibro(libro);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No existe un archivo con los libros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 
@@ -66,15 +87,21 @@ namespace BibliotecaUnimar
         private void UsuarioRegistrado()
         {
             cedula = txtCedula.Text; // Se obtiene la cédula ingresada de la caja de texto
-            if (DatosLista.lista.existeEstudiante(cedula)) // Se utiliza el método existeEstudiante de la lista de estudiantes para verificar si está registrado
+            titulo = txtLibro.Text; // Se obtiene el título del libro ingresado de la caja de texto
+            if (DatosLista.lista.existeEstudiante(cedula) && DatosListaLibros.lista.existeLibro(titulo)) // Se utiliza el método existeEstudiante de la lista de estudiantes para verificar si está registrado
             {
-                // TODO
+                MessageBox.Show("Préstamo Registrado"); // Se muestra un mensaje de éxito
             }
-            else // Si no está registrado
+            else if (DatosLista.lista.existeEstudiante(cedula) == false) // Si el estudiante no está registrado
             {
                 MessageBox.Show("Usuario no Registrado", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia indicando que el estudiante no se ha registrado
             }
+            else if (DatosListaLibros.lista.existeLibro(titulo) == false) // Si el libro no está disponible no está registrado
+            {
+                MessageBox.Show("Libro no Disponible", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
             txtCedula.Clear(); // Se limpia la caja de texto
+            txtLibro.Clear();
         }
 
         // Evento de tecla presionada en el campo de texto de la cédula
@@ -88,9 +115,14 @@ namespace BibliotecaUnimar
             }
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void txtLibro_KeyPress(object sender, KeyPressEventArgs e)
         {
-
+            if (!(Char.IsLetter(e.KeyChar) || e.KeyChar == 8 || e.KeyChar == 32))
+            {
+                e.Handled = true;
+                MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
         }
 
         private void btnVolverMenu_Click(object sender, EventArgs e)
