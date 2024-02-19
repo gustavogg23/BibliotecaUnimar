@@ -91,6 +91,7 @@ namespace BibliotecaUnimar
             if (DatosLista.lista.existeEstudiante(cedula) && DatosListaLibros.lista.existeLibro(titulo)) // Se utiliza el método existeEstudiante de la lista de estudiantes para verificar si está registrado
             {
                 MessageBox.Show("Préstamo Registrado"); // Se muestra un mensaje de éxito
+                DatosListaLibros.lista.buscarLibro(titulo).setDisponible(false); // Se cambia el estado del libro a no disponible
             }
             else if (DatosLista.lista.existeEstudiante(cedula) == false) // Si el estudiante no está registrado
             {
