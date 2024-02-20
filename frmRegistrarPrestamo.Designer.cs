@@ -42,11 +42,11 @@
             // 
             this.lblRegistroPrestamo.AutoSize = true;
             this.lblRegistroPrestamo.Font = new System.Drawing.Font("Consolas", 28F, System.Drawing.FontStyle.Bold);
-            this.lblRegistroPrestamo.Location = new System.Drawing.Point(227, 24);
+            this.lblRegistroPrestamo.Location = new System.Drawing.Point(212, 24);
             this.lblRegistroPrestamo.Name = "lblRegistroPrestamo";
-            this.lblRegistroPrestamo.Size = new System.Drawing.Size(440, 45);
+            this.lblRegistroPrestamo.Size = new System.Drawing.Size(461, 45);
             this.lblRegistroPrestamo.TabIndex = 0;
-            this.lblRegistroPrestamo.Text = "Registro De Préstamo";
+            this.lblRegistroPrestamo.Text = "Registro De Préstamos";
             // 
             // txtCedula
             // 

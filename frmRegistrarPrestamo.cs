@@ -39,7 +39,7 @@ namespace BibliotecaUnimar
         {
             if (txtCedula.Text == "" || txtLibro.Text == "") // Si la caja de texto está vacía
             {
-                MessageBox.Show("Debe ingresar la cédula del estudiante que desea solicitar un préstamo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
+                MessageBox.Show("Debe ingresar la cédula del estudiante y el título del libro para poder registrar el préstamo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
                 return false; // No se puede continuar
             }
             return true; // Todos los campos están llenos
