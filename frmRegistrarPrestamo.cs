@@ -92,7 +92,7 @@ namespace BibliotecaUnimar
             if (DatosLista.lista.existeEstudiante(cedula) && DatosListaLibros.lista.existeLibro(titulo) && DatosListaLibros.lista.buscarLibro(titulo).getDisponible()) // Se utiliza el método existeEstudiante de la lista de estudiantes para verificar si está registrado
             {
                 MessageBox.Show("Préstamo Registrado"); // Se muestra un mensaje de éxito
-                EscribirArchivo(); // Se escribe el préstamo en el archivo
+                EscribirArchivo(); // Se escribe el préstamo en el archivo con préstamos activos
                 DatosListaLibros.lista.buscarLibro(titulo).setDisponible(false); // Se cambia el estado del libro a no disponible
             }
             else if (DatosLista.lista.existeEstudiante(cedula) == false) // Si el estudiante no está registrado
@@ -114,16 +114,18 @@ namespace BibliotecaUnimar
         private void EscribirArchivo()
         {
             cedula = txtCedula.Text;
-            Estudiante estudiante = DatosLista.lista.buscarEstudiante(cedula);
-            string nombre = estudiante.getNombre();
-            string apellido = estudiante.getApellido();
-            string carrera = estudiante.getCarrera();
+            Estudiante estudiante = DatosLista.lista.buscarEstudiante(cedula); // Se busca el estudiante registrado
+            string nombre = estudiante.getNombre(); // Se obtiene el nombre del estudiante
+            string apellido = estudiante.getApellido(); // Se obtiene el apellido del estudiante
+            string carrera = estudiante.getCarrera(); // Se obtiene la carrera del estudiante
             titulo = txtLibro.Text; 
-            Libro libro = DatosListaLibros.lista.buscarLibro(titulo);
-            string nombreAutor = libro.getnombreAutor();
-            string apellidoAutor = libro.getApellidoAutor();
-            string genero = libro.getGenero();
+            Libro libro = DatosListaLibros.lista.buscarLibro(titulo); // Se busca el libro registrado
+            string nombreAutor = libro.getnombreAutor(); // Se obtiene el nombre del autor del libro
+            string apellidoAutor = libro.getApellidoAutor(); // Se obtiene el apellido del autor del libro
+            string genero = libro.getGenero(); // Se obtiene el género del libro
+            
             string ruta = @"PrestamosActivos.txt"; // Ruta del archivo
+            
             if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
             {
                 StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
