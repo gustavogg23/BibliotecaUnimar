@@ -71,11 +71,11 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Location = new System.Drawing.Point(405, 315);
+            this.btnBuscar.Location = new System.Drawing.Point(390, 320);
             this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(100, 41);
+            this.btnBuscar.Size = new System.Drawing.Size(131, 48);
             this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "BUSCAR";
+            this.btnBuscar.Text = "REGISTRAR";
             this.btnBuscar.UseVisualStyleBackColor = false;
             this.btnBuscar.Click += new System.EventHandler(this.btnControlUsuario_Click);
             // 
