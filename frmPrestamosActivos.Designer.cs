@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrestamosActivos));
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscarPrestramosActiv = new System.Windows.Forms.Button();
             this.btnVolverMenu = new System.Windows.Forms.Button();
@@ -38,7 +39,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Consolas", 30F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(169, 33);
+            this.label1.Location = new System.Drawing.Point(229, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(394, 47);
             this.label1.TabIndex = 0;
@@ -47,25 +48,27 @@
             // btnBuscarPrestramosActiv
             // 
             this.btnBuscarPrestramosActiv.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBuscarPrestramosActiv.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBuscarPrestramosActiv.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnBuscarPrestramosActiv.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPrestramosActiv.Location = new System.Drawing.Point(209, 335);
+            this.btnBuscarPrestramosActiv.Location = new System.Drawing.Point(193, 387);
             this.btnBuscarPrestramosActiv.Name = "btnBuscarPrestramosActiv";
-            this.btnBuscarPrestramosActiv.Size = new System.Drawing.Size(178, 77);
+            this.btnBuscarPrestramosActiv.Size = new System.Drawing.Size(210, 77);
             this.btnBuscarPrestramosActiv.TabIndex = 1;
-            this.btnBuscarPrestramosActiv.Text = "Buscar Prestamos Activos";
+            this.btnBuscarPrestramosActiv.Text = "MOSTRAR PRÉSTAMOS";
             this.btnBuscarPrestramosActiv.UseVisualStyleBackColor = false;
             // 
             // btnVolverMenu
             // 
             this.btnVolverMenu.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
-            this.btnVolverMenu.Location = new System.Drawing.Point(455, 335);
+            this.btnVolverMenu.Location = new System.Drawing.Point(471, 387);
             this.btnVolverMenu.Name = "btnVolverMenu";
-            this.btnVolverMenu.Size = new System.Drawing.Size(128, 77);
+            this.btnVolverMenu.Size = new System.Drawing.Size(194, 77);
             this.btnVolverMenu.TabIndex = 2;
-            this.btnVolverMenu.Text = "Volver al menú";
+            this.btnVolverMenu.Text = "VOLVER AL MENÚ";
             this.btnVolverMenu.UseVisualStyleBackColor = false;
             this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
             // 
@@ -74,12 +77,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(886, 543);
             this.Controls.Add(this.btnVolverMenu);
             this.Controls.Add(this.btnBuscarPrestramosActiv);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmPrestamosActivos";
-            this.Text = "PrestamosActivos";
+            this.Text = "Préstamos Activos";
             this.ResumeLayout(false);
             this.PerformLayout();
 
