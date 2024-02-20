@@ -115,10 +115,7 @@ namespace BibliotecaUnimar
             while (aux != null) // Se recorre la lista
             {
                 Libro libro = aux.getValorLib(); // Se obtiene el libro del nodo
-                if (libro.getDisponible()) // Si el libro está disponible
-                {
-                    listaLibros += libro.ToString() + "\r\n"; // Se concatenan los datos del libro
-                }
+                listaLibros += libro.ToString() + "\r\n"; // Se concatenan los datos del libro
                 aux = aux.getSiguiente(); // Se avanza al siguiente nodo
             }
             return listaLibros; // Se retorna la cadena con los títulos de los libros
