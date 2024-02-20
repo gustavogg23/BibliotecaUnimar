@@ -35,7 +35,7 @@
             this.btnRegistroPrest = new System.Windows.Forms.Button();
             this.btnPrestamosAct = new System.Windows.Forms.Button();
             this.btnLibrosDisp = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnEstudiantesBaneados = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
@@ -61,7 +61,7 @@
             this.flowLayoutPanel1.Controls.Add(this.btnRegistroPrest);
             this.flowLayoutPanel1.Controls.Add(this.btnPrestamosAct);
             this.flowLayoutPanel1.Controls.Add(this.btnLibrosDisp);
-            this.flowLayoutPanel1.Controls.Add(this.button1);
+            this.flowLayoutPanel1.Controls.Add(this.btnEstudiantesBaneados);
             this.flowLayoutPanel1.Controls.Add(this.button2);
             this.flowLayoutPanel1.Controls.Add(this.button3);
             this.flowLayoutPanel1.Controls.Add(this.button4);
@@ -130,18 +130,19 @@
             this.btnLibrosDisp.UseVisualStyleBackColor = false;
             this.btnLibrosDisp.Click += new System.EventHandler(this.btnLibrosDisp_Click);
             // 
-            // button1
+            // btnEstudiantesBaneados
             // 
-            this.button1.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(3, 137);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(185, 61);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Estudiantes Sancionados";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnEstudiantesBaneados.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnEstudiantesBaneados.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstudiantesBaneados.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold);
+            this.btnEstudiantesBaneados.ForeColor = System.Drawing.Color.White;
+            this.btnEstudiantesBaneados.Location = new System.Drawing.Point(3, 137);
+            this.btnEstudiantesBaneados.Name = "btnEstudiantesBaneados";
+            this.btnEstudiantesBaneados.Size = new System.Drawing.Size(185, 61);
+            this.btnEstudiantesBaneados.TabIndex = 4;
+            this.btnEstudiantesBaneados.Text = "Estudiantes Sancionados";
+            this.btnEstudiantesBaneados.UseVisualStyleBackColor = false;
+            this.btnEstudiantesBaneados.Click += new System.EventHandler(this.btnEstudiantesBaneados_Click);
             // 
             // button2
             // 
@@ -228,7 +229,7 @@
         private System.Windows.Forms.Button btnRegistroPrest;
         private System.Windows.Forms.Button btnPrestamosAct;
         private System.Windows.Forms.Button btnLibrosDisp;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnEstudiantesBaneados;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
