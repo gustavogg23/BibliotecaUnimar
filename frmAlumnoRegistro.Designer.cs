@@ -105,7 +105,7 @@
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.Size = new System.Drawing.Size(201, 65);
             this.btnVolverMenu.TabIndex = 18;
-            this.btnVolverMenu.Text = "VOLVER AL MENÚ";
+            this.btnVolverMenu.Text = "Volver al menú";
             this.btnVolverMenu.UseVisualStyleBackColor = false;
             this.btnVolverMenu.Click += new System.EventHandler(this.btnVolverMenu_Click);
             // 
@@ -119,7 +119,7 @@
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(185, 65);
             this.btnRegistrar.TabIndex = 17;
-            this.btnRegistrar.Text = "REGISTRAR";
+            this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 

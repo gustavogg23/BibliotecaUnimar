@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBaneados = new System.Windows.Forms.Button();
+            this.btnVolverBaneados = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -43,12 +45,40 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Estudiantes Sancionados";
             // 
+            // btnBaneados
+            // 
+            this.btnBaneados.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnBaneados.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
+            this.btnBaneados.ForeColor = System.Drawing.Color.White;
+            this.btnBaneados.Location = new System.Drawing.Point(156, 334);
+            this.btnBaneados.Name = "btnBaneados";
+            this.btnBaneados.Size = new System.Drawing.Size(169, 66);
+            this.btnBaneados.TabIndex = 1;
+            this.btnBaneados.Text = "Buscar Sancionados";
+            this.btnBaneados.UseVisualStyleBackColor = false;
+            this.btnBaneados.Click += new System.EventHandler(this.btnBaneados_Click);
+            // 
+            // btnVolverBaneados
+            // 
+            this.btnVolverBaneados.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.btnVolverBaneados.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
+            this.btnVolverBaneados.ForeColor = System.Drawing.Color.White;
+            this.btnVolverBaneados.Location = new System.Drawing.Point(432, 334);
+            this.btnVolverBaneados.Name = "btnVolverBaneados";
+            this.btnVolverBaneados.Size = new System.Drawing.Size(143, 66);
+            this.btnVolverBaneados.TabIndex = 2;
+            this.btnVolverBaneados.Text = "Volver al menú";
+            this.btnVolverBaneados.UseVisualStyleBackColor = false;
+            this.btnVolverBaneados.Click += new System.EventHandler(this.btnVolverBaneados_Click);
+            // 
             // frmEstudiantesBaneados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnVolverBaneados);
+            this.Controls.Add(this.btnBaneados);
             this.Controls.Add(this.label1);
             this.Name = "frmEstudiantesBaneados";
             this.Text = "Estudiantes Sancionados";
@@ -60,5 +90,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBaneados;
+        private System.Windows.Forms.Button btnVolverBaneados;
     }
 }

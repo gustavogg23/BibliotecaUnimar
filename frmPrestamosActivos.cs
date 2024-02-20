@@ -10,21 +10,16 @@ using System.Windows.Forms;
 
 namespace BibliotecaUnimar
 {
-    public partial class frmEstudiantesBaneados : Form
+    public partial class frmPrestamosActivos : Form
     {
-        public frmEstudiantesBaneados()
+        public frmPrestamosActivos()
         {
             InitializeComponent();
         }
 
-        private void btnBaneados_Click(object sender, EventArgs e)
+        private void btnVolverMenu_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnVolverBaneados_Click(object sender, EventArgs e)
-        {
-            Close();//cerrar el formulario
+            Close();
         }
     }
 }

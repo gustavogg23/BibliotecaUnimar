@@ -93,7 +93,26 @@ namespace BibliotecaUnimar
 
         private void btnEstudiantesBaneados_Click(object sender, EventArgs e)
         {
+            frmEstudiantesBaneados frm = new frmEstudiantesBaneados();
+            frm.ShowDialog();
+        }
 
+        private void btnPrestamosAct_Click(object sender, EventArgs e)
+        {
+            frmPrestamosActivos frm = new frmPrestamosActivos();
+            frm.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            frmRenovaciones frm = new frmRenovaciones();
+            frm.ShowDialog();
+        }
+
+        private void btnDevolucion_Click(object sender, EventArgs e)
+        {
+            frmDevoluciones frm = new frmDevoluciones ();
+            frm.ShowDialog();
         }
     }
 }

@@ -53,6 +53,12 @@
     <Compile Include="frmAlumnoRegistro.Designer.cs">
       <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDevoluciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDevoluciones.Designer.cs">
+      <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEstudiantesBaneados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,12 @@
     <Compile Include="frmLibrosDisponibles.Designer.cs">
       <DependentUpon>frmLibrosDisponibles.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmPrestamosActivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPrestamosActivos.Designer.cs">
+      <DependentUpon>frmPrestamosActivos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmRegistrarPrestamo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +88,12 @@
     </Compile>
     <Compile Include="frmRegistroLibro.Designer.cs">
       <DependentUpon>frmRegistroLibro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmRenovaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenovaciones.Designer.cs">
+      <DependentUpon>frmRenovaciones.cs</DependentUpon>
     </Compile>
     <Compile Include="Libro.cs" />
     <Compile Include="ListaEstudiantes.cs" />
@@ -92,17 +110,26 @@
     <EmbeddedResource Include="frmAlumnoRegistro.resx">
       <DependentUpon>frmAlumnoRegistro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmDevoluciones.resx">
+      <DependentUpon>frmDevoluciones.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEstudiantesBaneados.resx">
       <DependentUpon>frmEstudiantesBaneados.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLibrosDisponibles.resx">
       <DependentUpon>frmLibrosDisponibles.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmPrestamosActivos.resx">
+      <DependentUpon>frmPrestamosActivos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmRegistrarPrestamo.resx">
       <DependentUpon>frmRegistrarPrestamo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmRegistroLibro.resx">
       <DependentUpon>frmRegistroLibro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRenovaciones.resx">
+      <DependentUpon>frmRenovaciones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
