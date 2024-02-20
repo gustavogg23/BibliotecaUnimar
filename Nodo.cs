@@ -11,6 +11,7 @@ namespace BibliotecaUnimar
         // Atributos de la clase Nodo 
         private Estudiante valorEs;
         private Libro valorLib;
+        private Prestamo valorPr;
         private Nodo siguiente;
 
         // Método Constructor para usar con la lista de estudiantes
@@ -18,6 +19,7 @@ namespace BibliotecaUnimar
         {
             this.valorEs = valorEs;
             this.valorLib = null;
+            this.valorPr = null;
             this.siguiente = null;
         }
 
@@ -26,6 +28,16 @@ namespace BibliotecaUnimar
         {
             this.valorLib = valorLib;
             this.valorEs = null;
+            this.valorPr = null;
+            this.siguiente = null;
+        }
+
+        // Método Constructor para usar con la lista de préstamos
+        public Nodo(Prestamo valorPr)
+        {
+            this.valorPr = valorPr;
+            this.valorEs = null;
+            this.valorLib = null;
             this.siguiente = null;
         }
 
@@ -38,6 +50,11 @@ namespace BibliotecaUnimar
         public Libro getValorLib()
         {
             return valorLib;
+        }
+
+        public Prestamo getValorPr()
+        {
+            return valorPr;
         }
 
         public Nodo getSiguiente()
@@ -54,6 +71,11 @@ namespace BibliotecaUnimar
         public void setValorLib(Libro valorLib)
         {
             this.valorLib = valorLib;
+        }
+
+        public void setValorPr(Prestamo valorPr)
+        {
+            this.valorPr = valorPr;
         }
 
         public void setSiguiente(Nodo siguiente)

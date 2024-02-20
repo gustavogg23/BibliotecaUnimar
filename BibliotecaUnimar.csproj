@@ -98,6 +98,7 @@
     <Compile Include="Libro.cs" />
     <Compile Include="ListaEstudiantes.cs" />
     <Compile Include="ListaLibros.cs" />
+    <Compile Include="ListaPrestamos.cs" />
     <Compile Include="MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>

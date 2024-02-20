@@ -80,11 +80,13 @@ namespace BibliotecaUnimar
         // Método para eliminar un estudiante de la lista
         public void eliminarEstudiante(string cedula)
         {
+            Boolean encontrado = false; // Se inicializa la variable encontrado en false
             if (cabeza != null) // Si la lista no está vacía
             {
                 if (cabeza.getValor().getCedula() == cedula) // Si el estudiante a eliminar es la cabeza
                 {
                     cabeza = cabeza.getSiguiente(); // Se elimina la cabeza
+                    encontrado = true; // Se cambia el valor de encontrado a true
                 }
                 else // Si el estudiante a eliminar no es la cabeza
                 {
@@ -94,12 +96,16 @@ namespace BibliotecaUnimar
                         if (aux.getSiguiente().getValor().getCedula() == cedula) // Si se encuentra el estudiante a eliminar
                         {
                             aux.setSiguiente(aux.getSiguiente().getSiguiente()); // Se elimina el estudiante
+                            encontrado = true; // Se cambia el valor de encontrado a true
                             break; // Se rompe el ciclo
                         }
                         aux = aux.getSiguiente(); // Se avanza al siguiente nodo
                     }
                 }
-                tamano--; // Se decrementa el tamaño de la lista
+                if (encontrado) // Si se encontró el estudiante
+                {
+                    tamano--; // Se decrementa el tamaño de la lista
+                }
             }
         }
 
