@@ -90,5 +90,10 @@ namespace BibliotecaUnimar
                 MessageBox.Show("Error al leer el archivo de libros disponibles: " + ex.Message);
             }
         }
+
+        private void btnEstudiantesBaneados_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
