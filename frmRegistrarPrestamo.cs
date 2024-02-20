@@ -65,17 +65,18 @@ namespace BibliotecaUnimar
             }
         }
 
+        // Método para leer el archivo de libros registrados
         private void LeerArchivoLibros()
         {
             try
             {
-                string ruta = @"LibrosIngresados.txt";
-                string[] lineas = File.ReadAllLines(ruta);
-                foreach (string linea in lineas)
+                string ruta = @"LibrosIngresados.txt"; // Ruta del archivo
+                string[] lineas = File.ReadAllLines(ruta); // Se leen todas las líneas del archivo y se guardan en un arreglo
+                foreach (string linea in lineas) // Se recorre el arreglo, es decir, cada línea del archivo
                 {
-                    string[] datos = linea.Split(' ');
-                    Libro libro = new Libro(datos[0], datos[1], datos[2], datos[3], true);
-                    DatosListaLibros.lista.agregarLibro(libro);
+                    string[] datos = linea.Split(' '); // Se separan los datos de cada línea cuando encuentre un espacio
+                    Libro libro = new Libro(datos[0], datos[1], datos[2], datos[3], true); // Se crea un objeto de tipo libro con los datos separados
+                    DatosListaLibros.lista.agregarLibro(libro); // Se agrega el objeto a la lista de libros
                 }
             }
             catch (Exception ex)
@@ -115,27 +116,24 @@ namespace BibliotecaUnimar
         {
             cedula = txtCedula.Text;
             Estudiante estudiante = DatosLista.lista.buscarEstudiante(cedula); // Se busca el estudiante registrado
-            string nombre = estudiante.getNombre(); // Se obtiene el nombre del estudiante
-            string apellido = estudiante.getApellido(); // Se obtiene el apellido del estudiante
-            string carrera = estudiante.getCarrera(); // Se obtiene la carrera del estudiante
+            
             titulo = txtLibro.Text; 
             Libro libro = DatosListaLibros.lista.buscarLibro(titulo); // Se busca el libro registrado
-            string nombreAutor = libro.getnombreAutor(); // Se obtiene el nombre del autor del libro
-            string apellidoAutor = libro.getApellidoAutor(); // Se obtiene el apellido del autor del libro
-            string genero = libro.getGenero(); // Se obtiene el género del libro
+            
+            Prestamo prestamo = new Prestamo(estudiante, libro, DateTime.Now); // Se crea un objeto de tipo préstamo con los datos obtenidos
             
             string ruta = @"PrestamosActivos.txt"; // Ruta del archivo
             
             if (File.Exists(ruta)) // Verifica si el archivo en la ruta especificada existe
             {
                 StreamWriter agregar = File.AppendText(ruta); // Se crea un objeto de tipo StreamWriter para agregar información al archivo
-                agregar.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera + " " + titulo + " " + nombreAutor + " " + apellidoAutor + " " + genero); // Se escriben los datos del estudiante recién registrado en el archivo
+                agregar.WriteLine(prestamo.ToString());
                 agregar.Close(); // Se cierra el archivo
             }
             else // Si el archivo no existe
             {
                 TextWriter escribir = new StreamWriter(ruta); // Se crea un objeto de tipo TextWriter para escribir en el archivo
-                escribir.WriteLine(nombre + " " + apellido + " " + cedula + " " + carrera + " " + titulo + " " + nombreAutor + " " + apellidoAutor + " " + genero); // Se escriben los datos del estudiante recién registrado en el archivo
+                escribir.WriteLine(prestamo.ToString());
                 escribir.Close(); // Se cierra el archivo
             }
         }
