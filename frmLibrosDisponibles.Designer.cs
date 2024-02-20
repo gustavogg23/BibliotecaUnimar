@@ -130,6 +130,7 @@
             this.btnFiltrar.TabIndex = 22;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = false;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmLibrosDisponibles
             // 

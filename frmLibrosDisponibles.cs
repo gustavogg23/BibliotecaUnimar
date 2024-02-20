@@ -18,7 +18,7 @@ namespace BibliotecaUnimar
             InitializeComponent();
         }
 
-        string titulo, genero;
+        string genero;
 
         private void btnVolverMenu_Click(object sender, EventArgs e)
         {
@@ -27,8 +27,33 @@ namespace BibliotecaUnimar
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)
         {
+            txtLibrosDisponibles.Clear();
             string datosLibros = DatosListaLibros.lista.mostrarLibros();
             txtLibrosDisponibles.Text = datosLibros;
+        }
+
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            if (ValidarCampos())
+            {
+                txtLibrosDisponibles.Clear();
+                genero = cboGenero.Text;
+                string datosLibros = DatosListaLibros.lista.mostrarLibrosGenero(genero);
+                txtLibrosDisponibles.Text = datosLibros;
+                cboGenero.SelectedIndex = -1;
+            }
+            else return;
+            
+        }
+
+        private Boolean ValidarCampos()
+        {
+            if (cboGenero.Text == "") // Si la caja de texto está vacía
+            {
+                MessageBox.Show("Debe seleccionar un género para filtrar los libros", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation); // Se muestra un mensaje de advertencia
+                return false; // No se puede continuar
+            }
+            return true; // Todos los campos están llenos
         }
 
         private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)

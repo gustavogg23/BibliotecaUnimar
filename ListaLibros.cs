@@ -120,5 +120,22 @@ namespace BibliotecaUnimar
             }
             return listaLibros; // Se retorna la cadena con los títulos de los libros
         }
+
+        // Método para mostrar los libros de un género específico
+        public string mostrarLibrosGenero(string genero)
+        {
+            string listaLibros = ""; // Se crea una cadena vacía
+            Nodo aux = cabeza; // Se crea un nodo auxiliar
+            while (aux != null) // Se recorre la lista
+            {
+                Libro libro = aux.getValorLib(); // Se obtiene el libro del nodo
+                if (libro.getGenero() == genero) // Si el género del libro coincide con el género ingresado
+                {
+                    listaLibros += libro.ToString() + "\r\n"; // Se concatenan los datos del libro
+                }
+                aux = aux.getSiguiente(); // Se avanza al siguiente nodo
+            }
+            return listaLibros; // Se retorna la cadena con los títulos de los libros
+        }
     }
 }
