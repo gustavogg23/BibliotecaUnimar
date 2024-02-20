@@ -27,7 +27,8 @@ namespace BibliotecaUnimar
 
         private void btnBuscarLibro_Click(object sender, EventArgs e)
         {
-            MostrarLibrosDisponibles();
+            string datosLibros = DatosListaLibros.lista.mostrarLibros();
+            txtLibrosDisponibles.Text = datosLibros;
         }
 
         private void txtTitulo_KeyPress(object sender, KeyPressEventArgs e)
@@ -38,12 +39,6 @@ namespace BibliotecaUnimar
                 MessageBox.Show("Solo se permiten letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 return;
             }
-        }
-
-        private void MostrarLibrosDisponibles()
-        {
-            string datosLibros = DatosListaLibros.lista.mostrarLibros();
-            txtLibrosDisponibles.Text = datosLibros;
         }
     }
 }

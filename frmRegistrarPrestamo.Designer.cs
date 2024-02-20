@@ -71,7 +71,7 @@
             // 
             this.btnBuscar.BackColor = System.Drawing.Color.LightSkyBlue;
             this.btnBuscar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBuscar.Location = new System.Drawing.Point(390, 320);
+            this.btnBuscar.Location = new System.Drawing.Point(363, 327);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(131, 48);
             this.btnBuscar.TabIndex = 8;
@@ -85,7 +85,7 @@
             this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
-            this.btnVolverMenu.Location = new System.Drawing.Point(355, 388);
+            this.btnVolverMenu.Location = new System.Drawing.Point(328, 395);
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.Size = new System.Drawing.Size(201, 65);
             this.btnVolverMenu.TabIndex = 19;
