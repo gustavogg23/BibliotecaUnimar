@@ -59,7 +59,6 @@ namespace BibliotecaUnimar
             carrera = cboCarrera.Text;
 
             Estudiante estudiante = new Estudiante(nombre, apellido, cedula, carrera); // Se crea un objeto de tipo estudiante con los datos ingresados
-            txtListEstudiantes.Text += estudiante.ToString() + "\r\n";
 
             DatosLista.lista.agregarEstudiante(estudiante); // Se agrega el objeto a la lista de estudiantes
         }
