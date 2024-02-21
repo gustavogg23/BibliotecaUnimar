@@ -106,6 +106,7 @@ namespace BibliotecaUnimar
 
             LeerArchivoEstudiantes();
             LeerArchivoLibros();
+            LeerArchivoPrestamos();
 
             if (DatosLista.lista.existeEstudiante(cedula) == false)
             {
