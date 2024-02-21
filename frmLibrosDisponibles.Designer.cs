@@ -101,7 +101,8 @@
             "Ciencia Ficción",
             "Poesía",
             "Libros Técnicos",
-            "Libros de Texto"});
+            "Libros de Texto",
+            "Tesis de Grado"});
             this.cboGenero.Location = new System.Drawing.Point(166, 157);
             this.cboGenero.Name = "cboGenero";
             this.cboGenero.Size = new System.Drawing.Size(185, 27);

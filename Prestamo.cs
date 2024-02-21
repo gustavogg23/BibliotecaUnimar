@@ -37,6 +37,12 @@ namespace BibliotecaUnimar
             return fechaPrestamo;
         }
 
+        // Métodos Setters
+        public void setFechaPrestamo(DateTime fechaPrestamo)
+        {
+            this.fechaPrestamo = fechaPrestamo;
+        }
+
         // Método ToString para mostrar los datos del préstamo
         public override string ToString()
         {

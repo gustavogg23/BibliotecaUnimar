@@ -102,12 +102,12 @@ namespace BibliotecaUnimar
                 int difFechas = (DateTime.Now - prestamo.getFechaPrestamo()).Days;
                 if (difFechas > 3)
                  {
-                    listaPrestamos += estudiante.ToString() + libro.ToString() + "\r\nEstado: Suspendido/a";
+                    listaPrestamos += "\r\n" + estudiante.ToString() + libro.ToString() + "Estado: Suspendido/a\r\n";
                     aux = aux.getSiguiente();
                  }
                  else
                  {
-                    listaPrestamos += estudiante.ToString() + libro.ToString() + "\r\nEstado: Habilitado/a";
+                    listaPrestamos += "\r\n" + estudiante.ToString() + libro.ToString() + "Estado: Habilitado/a\r\n";
                     aux = aux.getSiguiente();
                  }           
             }
