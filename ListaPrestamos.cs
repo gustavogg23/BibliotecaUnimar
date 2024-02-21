@@ -128,5 +128,29 @@ namespace BibliotecaUnimar
             }
             return listaPrestamos;
         }
+
+        // Método para mostrar estudiantes sancionados
+        public string mostrarSancionados()
+        {
+            string listaSancionados = "";
+            Nodo aux = cabeza;
+            while (aux != null)
+            {
+                Prestamo prestamo = aux.getValorPr();
+                Estudiante estudiante = prestamo.getEstudiante();
+                Libro libro = prestamo.getLibro();
+                int difFechas = (DateTime.Now - prestamo.getFechaPrestamo()).Days;
+                if (difFechas > 3)
+                {
+                    listaSancionados += "\r\n" + estudiante.ToString() + libro.ToString() + "Estado: Suspendido/a\r\n";
+                    aux = aux.getSiguiente();
+                }
+                else
+                {
+                    aux = aux.getSiguiente();
+                }
+            }
+            return listaSancionados;
+        }
     }
 }
