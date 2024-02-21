@@ -35,7 +35,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnVolverMenu = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
-            this.txtListEstudiantes = new System.Windows.Forms.TextBox();
             this.cboCarrera = new System.Windows.Forms.ComboBox();
             this.lblCarrera = new System.Windows.Forms.Label();
             this.txtApellido = new System.Windows.Forms.TextBox();
@@ -48,7 +47,7 @@
             // txtNombre
             // 
             this.txtNombre.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.Location = new System.Drawing.Point(191, 48);
+            this.txtNombre.Location = new System.Drawing.Point(306, 55);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(185, 26);
             this.txtNombre.TabIndex = 9;
@@ -58,7 +57,7 @@
             // 
             this.lblNombre.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(69, 42);
+            this.lblNombre.Location = new System.Drawing.Point(184, 49);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(133, 38);
             this.lblNombre.TabIndex = 8;
@@ -81,7 +80,6 @@
             // 
             this.panel1.Controls.Add(this.btnVolverMenu);
             this.panel1.Controls.Add(this.btnRegistrar);
-            this.panel1.Controls.Add(this.txtListEstudiantes);
             this.panel1.Controls.Add(this.cboCarrera);
             this.panel1.Controls.Add(this.lblCarrera);
             this.panel1.Controls.Add(this.txtApellido);
@@ -101,7 +99,7 @@
             this.btnVolverMenu.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVolverMenu.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnVolverMenu.ForeColor = System.Drawing.Color.White;
-            this.btnVolverMenu.Location = new System.Drawing.Point(278, 278);
+            this.btnVolverMenu.Location = new System.Drawing.Point(393, 285);
             this.btnVolverMenu.Name = "btnVolverMenu";
             this.btnVolverMenu.Size = new System.Drawing.Size(201, 65);
             this.btnVolverMenu.TabIndex = 18;
@@ -115,21 +113,13 @@
             this.btnRegistrar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegistrar.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(62, 278);
+            this.btnRegistrar.Location = new System.Drawing.Point(177, 285);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(185, 65);
             this.btnRegistrar.TabIndex = 17;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = false;
             this.btnRegistrar.Click += new System.EventHandler(this.btnBuscar_Click);
-            // 
-            // txtListEstudiantes
-            // 
-            this.txtListEstudiantes.Location = new System.Drawing.Point(515, 45);
-            this.txtListEstudiantes.Multiline = true;
-            this.txtListEstudiantes.Name = "txtListEstudiantes";
-            this.txtListEstudiantes.Size = new System.Drawing.Size(207, 298);
-            this.txtListEstudiantes.TabIndex = 16;
             // 
             // cboCarrera
             // 
@@ -144,7 +134,7 @@
             "Psicología",
             "Idiomas Modernos",
             "Diseño Gráfico"});
-            this.cboCarrera.Location = new System.Drawing.Point(191, 201);
+            this.cboCarrera.Location = new System.Drawing.Point(306, 208);
             this.cboCarrera.Name = "cboCarrera";
             this.cboCarrera.Size = new System.Drawing.Size(185, 27);
             this.cboCarrera.TabIndex = 15;
@@ -153,7 +143,7 @@
             // 
             this.lblCarrera.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCarrera.ForeColor = System.Drawing.Color.White;
-            this.lblCarrera.Location = new System.Drawing.Point(69, 193);
+            this.lblCarrera.Location = new System.Drawing.Point(184, 200);
             this.lblCarrera.Name = "lblCarrera";
             this.lblCarrera.Size = new System.Drawing.Size(133, 38);
             this.lblCarrera.TabIndex = 14;
@@ -163,7 +153,7 @@
             // txtApellido
             // 
             this.txtApellido.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.Location = new System.Drawing.Point(191, 100);
+            this.txtApellido.Location = new System.Drawing.Point(306, 107);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(185, 26);
             this.txtApellido.TabIndex = 13;
@@ -173,7 +163,7 @@
             // 
             this.lblApellido.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblApellido.ForeColor = System.Drawing.Color.White;
-            this.lblApellido.Location = new System.Drawing.Point(57, 90);
+            this.lblApellido.Location = new System.Drawing.Point(172, 97);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(133, 38);
             this.lblApellido.TabIndex = 12;
@@ -183,7 +173,7 @@
             // txtCedula
             // 
             this.txtCedula.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCedula.Location = new System.Drawing.Point(191, 150);
+            this.txtCedula.Location = new System.Drawing.Point(306, 157);
             this.txtCedula.Name = "txtCedula";
             this.txtCedula.Size = new System.Drawing.Size(185, 26);
             this.txtCedula.TabIndex = 11;
@@ -193,7 +183,7 @@
             // 
             this.lblCedula.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCedula.ForeColor = System.Drawing.Color.White;
-            this.lblCedula.Location = new System.Drawing.Point(69, 142);
+            this.lblCedula.Location = new System.Drawing.Point(184, 149);
             this.lblCedula.Name = "lblCedula";
             this.lblCedula.Size = new System.Drawing.Size(133, 38);
             this.lblCedula.TabIndex = 10;
@@ -231,7 +221,6 @@
         private System.Windows.Forms.Label lblApellido;
         private System.Windows.Forms.TextBox txtCedula;
         private System.Windows.Forms.Label lblCedula;
-        private System.Windows.Forms.TextBox txtListEstudiantes;
         private System.Windows.Forms.ComboBox cboCarrera;
         private System.Windows.Forms.Label lblCarrera;
         private System.Windows.Forms.Button btnRegistrar;
