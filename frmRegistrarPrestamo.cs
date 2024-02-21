@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static BibliotecaUnimar.frmAlumnoRegistro;
+using static BibliotecaUnimar.frmPrestamosActivos;
 using static BibliotecaUnimar.frmRegistroLibro;
 
 namespace BibliotecaUnimar
@@ -107,6 +108,10 @@ namespace BibliotecaUnimar
             else if (DatosListaLibros.lista.buscarLibro(titulo).getDisponible() == false) // Si el libro no está disponible
             {
                 MessageBox.Show("Libro no Disponible", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else if (DatosListaPrestamos.lista.existePrestamo(cedula)) // Si el estudiante ya tiene un préstamo activo
+            {
+                MessageBox.Show("El estudiante ya tiene un préstamo activo", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
             txtCedula.Clear(); // Se limpia la caja de texto
             txtLibro.Clear();

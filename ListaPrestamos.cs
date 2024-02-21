@@ -75,6 +75,21 @@ namespace BibliotecaUnimar
             }
         }
 
+        // Método para buscar un préstamo en la lista
+        public Prestamo buscarPrestamo(string cedula)
+        {
+            Nodo aux = cabeza; // Se crea un nodo auxiliar
+            while (aux != null) // Se recorre la lista
+            {
+                if (aux.getValorPr().getEstudiante().getCedula() == cedula) // Si se encuentra la cédula del estudiante
+                {
+                    return aux.getValorPr(); // Se retorna el préstamo
+                }
+                aux = aux.getSiguiente(); // Se avanza al siguiente nodo
+            }
+            return null; // Si no se encuentra el estudiante, se retorna null
+        }
+
         // Método para verificar si ya existe un préstamo en la lista bajo una cédula específica
         public Boolean existePrestamo(string cedula)
         {

@@ -32,6 +32,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnRenovar = new System.Windows.Forms.Button();
             this.btnVOlver = new System.Windows.Forms.Button();
+            this.txtCedula = new System.Windows.Forms.TextBox();
+            this.lblCedula = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -51,12 +53,13 @@
             this.btnRenovar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRenovar.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnRenovar.ForeColor = System.Drawing.Color.White;
-            this.btnRenovar.Location = new System.Drawing.Point(296, 402);
+            this.btnRenovar.Location = new System.Drawing.Point(265, 302);
             this.btnRenovar.Name = "btnRenovar";
             this.btnRenovar.Size = new System.Drawing.Size(115, 60);
             this.btnRenovar.TabIndex = 1;
             this.btnRenovar.Text = "RENOVAR";
             this.btnRenovar.UseVisualStyleBackColor = false;
+            this.btnRenovar.Click += new System.EventHandler(this.btnRenovar_Click);
             // 
             // btnVOlver
             // 
@@ -64,7 +67,7 @@
             this.btnVOlver.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnVOlver.Font = new System.Drawing.Font("Consolas", 14F, System.Drawing.FontStyle.Bold);
             this.btnVOlver.ForeColor = System.Drawing.Color.White;
-            this.btnVOlver.Location = new System.Drawing.Point(480, 402);
+            this.btnVOlver.Location = new System.Drawing.Point(449, 302);
             this.btnVOlver.Name = "btnVOlver";
             this.btnVOlver.Size = new System.Drawing.Size(164, 61);
             this.btnVOlver.TabIndex = 2;
@@ -72,12 +75,34 @@
             this.btnVOlver.UseVisualStyleBackColor = false;
             this.btnVOlver.Click += new System.EventHandler(this.btnVOlver_Click);
             // 
+            // txtCedula
+            // 
+            this.txtCedula.Font = new System.Drawing.Font("Comic Sans MS", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCedula.Location = new System.Drawing.Point(456, 183);
+            this.txtCedula.Name = "txtCedula";
+            this.txtCedula.Size = new System.Drawing.Size(173, 30);
+            this.txtCedula.TabIndex = 25;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
+            // 
+            // lblCedula
+            // 
+            this.lblCedula.Font = new System.Drawing.Font("Consolas", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCedula.ForeColor = System.Drawing.Color.White;
+            this.lblCedula.Location = new System.Drawing.Point(242, 173);
+            this.lblCedula.Name = "lblCedula";
+            this.lblCedula.Size = new System.Drawing.Size(213, 38);
+            this.lblCedula.TabIndex = 24;
+            this.lblCedula.Text = "C.I. Estudiante:";
+            this.lblCedula.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frmRenovaciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(72)))), ((int)(((byte)(124)))));
             this.ClientSize = new System.Drawing.Size(886, 548);
+            this.Controls.Add(this.txtCedula);
+            this.Controls.Add(this.lblCedula);
             this.Controls.Add(this.btnVOlver);
             this.Controls.Add(this.btnRenovar);
             this.Controls.Add(this.label1);
@@ -98,5 +123,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnRenovar;
         private System.Windows.Forms.Button btnVOlver;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Label lblCedula;
     }
 }
